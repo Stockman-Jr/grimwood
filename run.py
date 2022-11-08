@@ -21,6 +21,7 @@ def start_game():
     # time.sleep(1)
     typing(f"Good luck {player_name}....\n")
     typing(input("Press enter to start game...\n"))
+    intro_scene()
 
 
 def intro_scene():
@@ -60,7 +61,13 @@ def fruit_grove():
         "B. Seems like a waste of time, you're not hungry. Go back and head south instead.\n")
 
     choices = input_checker(
-        "What will you do?(a/b) >>", OPTIONS[0:2]) 
+        "What will you do?(a/b) >>", OPTIONS[0:2])
+
+    if choices == "a":
+        typing(story.DEAD_GROVE)
+        exit()
+    elif choices == "b":
+        three_fork_path()
 
 
 def three_fork_path():
@@ -69,6 +76,27 @@ def three_fork_path():
     Some story will be told and then user will be prompted to choose
     from three directions.
     """
+
+    typing("You arrive at a three-way-fork in the path.\n You stop to think...\n")
+    typing(
+        "Looking west, you see a strange, faint light.\n")
+    typing(
+        "Looking east, the forest looks denser, making it darker and harder to see.\n")
+    typing(
+        "Maybe you should ignore the paths and continue south, off piste.\n")
+
+    choices = input_checker(
+        "Where will you go?(west/east/south) >> ", OPTIONS[5:8])
+
+    if choices == "west":
+        flashlight_scene()
+    elif choices == "east":
+        creatures_den()
+    elif choices == "south" and modern_flashlight is True:
+        abandoned_house()
+    elif choices == "south" and modern_flashlight is False:
+        print("dead")
+        exit()
 
 
 def flashlight_scene():

@@ -9,7 +9,8 @@ INTRO_MSG = ("""
 DEAD_GROVE = ("""
             You walk towards the grove and stop at the entrace to look around, the fruits looks delicious.
           
-            As you start walking to pick up some fruit for your journey, you suddenly feel the ground beneath you give in..
+            As you start walking to pick up some fruit for your journey, 
+            you suddenly feel the ground beneath you give in..
           
             "AAAaaahh"....
           
