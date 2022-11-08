@@ -99,6 +99,7 @@ def three_fork_path():
         exit()
 
 
+
 def flashlight_scene():
     """
     If user chose west from three_fork_path, this function will play out.
