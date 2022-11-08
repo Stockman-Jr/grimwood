@@ -123,7 +123,7 @@ def flashlight_scene():
     typing("You take a second to think...\n")
 
     typing("A. It's probably your imagination, or some kind of animal. Direct your flashlight towards the sounds and see what it is.\n")
-    typing("B. Trust your instincs, flee! Run for your life back to the three-way-fork.\n")
+    typing("B. Trust your instincs, flee! Run back to the three-way-fork.\n")
 
     choices = input_checker(
         "What will you do?(a/b) >> ", OPTIONS[0:2])
@@ -134,7 +134,7 @@ def flashlight_scene():
     elif choices == "b":
         three_fork_path()
 
-    return modern_flashlight    
+    return modern_flashlight
 
 
 def creatures_den():
@@ -150,6 +150,22 @@ def abandoned_house():
     If user chose south from three_fork_path, this function will play out.
     User can only reach this point if modern_flashlight is True
     """
+
+    typing(story.HOUSE)
+    typing("In the left corner there's a bed with a nightstand next to it, seems to have two drawers.\n")
+    typing("In front of you there is a desk and a chair, with piles of notes and books scattered across the floor and desk.\n")
+    typing("You should probably look around.. You think about where to start...\n ")
+    
+    print("""
+          A. Underneath the bed
+
+          B. Check the nightstand
+
+          C. Underneath the desk
+
+          D. Check what's on top of the desk
+
+          """)
 
 
 start_game()
