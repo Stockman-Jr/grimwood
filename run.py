@@ -49,6 +49,18 @@ def fruit_grove():
     If user chose east from intro scene, this function will play out.
     Some story will be told and then user will be provided with two options.
     """
+    typing(
+        "You've been walking for ten minutes when you suddenly stop.\n ")
+    typing(
+        "You see in front of you what looks like a small grove surrounded by trees bearing fruit. You stop to think..\n")
+
+    typing(
+        "A. Some fruit might come in handy for your survival, after all you have no idea where you are and how long you might be stuck in these woods. Go forward and pick up some fruit.\n")
+    typing(
+        "B. Seems like a waste of time, you're not hungry. Go back and head south instead.\n")
+
+    choices = input_checker(
+        "What will you do?(a/b) >>", OPTIONS[0:2]) 
 
 
 def three_fork_path():
