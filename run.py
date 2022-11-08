@@ -79,18 +79,18 @@ def three_fork_path():
 
     typing("You arrive at a three-way-fork in the path.\n You stop to think...\n")
     typing(
-        "Looking west, you see a strange, faint light.\n")
+        "Looking east, you see a strange, faint light.\n")
     typing(
-        "Looking east, the forest looks denser, making it darker and harder to see.\n")
+        "Looking west, the forest looks denser, making it darker and harder to see.\n")
     typing(
         "Maybe you should ignore the paths and continue south, off piste.\n")
 
     choices = input_checker(
         "Where will you go?(west/east/south) >> ", OPTIONS[5:8])
 
-    if choices == "west":
+    if choices == "east":
         flashlight_scene()
-    elif choices == "east":
+    elif choices == "west":
         creatures_den()
     elif choices == "south" and modern_flashlight is True:
         abandoned_house()
@@ -155,7 +155,7 @@ def abandoned_house():
     typing("In the left corner there's a bed with a nightstand next to it, seems to have two drawers.\n")
     typing("In front of you there is a desk and a chair, with piles of notes and books scattered across the floor and desk.\n")
     typing("You should probably look around.. You think about where to start...\n ")
-    
+
     print("""
           A. Underneath the bed
 
@@ -166,6 +166,27 @@ def abandoned_house():
           D. Check what's on top of the desk
 
           """)
+    for investigations in range(2):
+        choices = input_checker(
+            """What would you like to investigate?(a/b/c/d) >> """, OPTIONS[0:4])
+        if choices == "a":
+            print(
+                "You go to the bed, crouch down and use your flashlight to see what's there..\n")
+
+            print("Nothing but spiderwebs and dusty old notes..")
+        elif choices == "b":
+            print("You go to the nightstand and open the drawers..")
+
+            print("Just trash, nothing useful.")
+        elif choices == "c":
+            story.HOUSE_ITEM
+            break
+        elif choices == "d":
+            print("You go to the desk to check what's on it..")
+
+            print("Creepy books, notes written in a language you can't depict and a tin box that's empty... Nothing useful here.")
+    else:
+        print("dead")
 
 
 start_game()
