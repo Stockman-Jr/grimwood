@@ -1,6 +1,6 @@
 import time
 import story
-from functions import typing
+from functions import typing, input_checker
 
 modern_flashlight = False
 old_flashlight = False
@@ -28,6 +28,20 @@ def intro_scene():
     First scene of the game, where user will be able
     to choose which direction to take
     """
+  
+    # typing(
+    #   "It's almost pitch black, you give yourself a minute to adjust your eyes to the darkness.\n")
+    typing(
+        "You stand up and look around, you're standing on a path that splits in two directions.\n")
+    time.sleep(1)
+
+    choices = input_checker(
+        "Which way will you go? Type east or south.\n", OPTIONS[4:7])
+
+    if choices == "east":
+        fruit_grove()
+    elif choices == "south":
+        three_fork_path()
 
 
 def fruit_grove():
