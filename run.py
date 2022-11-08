@@ -99,7 +99,6 @@ def three_fork_path():
         exit()
 
 
-
 def flashlight_scene():
     """
     If user chose west from three_fork_path, this function will play out.
@@ -107,6 +106,19 @@ def flashlight_scene():
     That choice will update the global modern_flashlight variable.
     A scene will then play out and promp user to choose from two options.
     """
+    global modern_flashlight
+    typing(story.FOUND_ITEM)
+    time.sleep(1)
+    typing("Would you like to keep it? (yes/no)")
+    userInput = input()
+
+    if userInput == "yes":
+        modern_flashlight = True
+        print("You kept the flashlight.")
+        # typing(story.ENCOUNTER)
+    elif userInput == "no":
+        modern_flashlight = False
+        # typing(story.ENCOUNTER)
 
 
 def creatures_den():
