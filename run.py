@@ -120,6 +120,22 @@ def flashlight_scene():
         modern_flashlight = False
         # typing(story.ENCOUNTER)
 
+    typing("You take a second to think...\n")
+
+    typing("A. It's probably your imagination, or some kind of animal. Direct your flashlight towards the sounds and see what it is.\n")
+    typing("B. Trust your instincs, flee! Run for your life back to the three-way-fork.\n")
+
+    choices = input_checker(
+        "What will you do?(a/b) >> ", OPTIONS[0:2])
+
+    if choices == "a":
+        print("dead")
+        exit()
+    elif choices == "b":
+        three_fork_path()
+
+    return modern_flashlight    
+
 
 def creatures_den():
     """
