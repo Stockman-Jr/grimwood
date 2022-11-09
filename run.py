@@ -150,6 +150,7 @@ def abandoned_house():
     If user chose south from three_fork_path, this function will play out.
     User can only reach this point if modern_flashlight is True
     """
+    global old_flashlight
 
     typing(story.HOUSE)
     typing("In the left corner there's a bed with a nightstand next to it, seems to have two drawers.\n")
@@ -166,10 +167,15 @@ def abandoned_house():
           D. Check what's on top of the desk
 
           """)
-    for investigations in range(2):
+    for choices in range(2):
         choices = input_checker(
             """What would you like to investigate?(a/b/c/d) >> """, OPTIONS[0:4])
-        if choices == "a":
+
+        if choices == "c":
+            typing(story.HOUSE_ITEM)
+            old_flashlight = True
+            return old_flashlight
+        elif choices == "a":
             print(
                 "You go to the bed, crouch down and use your flashlight to see what's there..\n")
 
@@ -178,15 +184,13 @@ def abandoned_house():
             print("You go to the nightstand and open the drawers..")
 
             print("Just trash, nothing useful.")
-        elif choices == "c":
-            story.HOUSE_ITEM
-            break
         elif choices == "d":
             print("You go to the desk to check what's on it..")
 
             print("Creepy books, notes written in a language you can't depict and a tin box that's empty... Nothing useful here.")
     else:
-        print("dead")
+        typing(story.HOUSE_ENCOUNTER)
+        typing("And so it was all over within seconds...")
 
 
 start_game()
