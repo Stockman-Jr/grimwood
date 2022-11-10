@@ -1,6 +1,17 @@
 import time
 import sys
 
+BANNER = print("""
+       ▄█▀─▄▄▄▄▄▄▄─▀█▄
+       ▀█████████████▀
+       ────█▄███▄█
+       ─────█▀█▀█
+            
+█▀▀ █▀█ █ █▀▄▀█ █░█░█ █▀█ █▀█ █▀▄
+█▄█ █▀▄ █ █░▀░█ ▀▄▀▄▀ █▄█ █▄█ █▄▀ 
+
+""")
+
 
 def typing(text):
     """
@@ -33,7 +44,7 @@ def win_game(message):
     typing(message)
     time.sleep(1)
     print("•·✦º✦·» ヽ(´▽`)/ «·✦º✦·•\n")
-    typing("You made it to safety, you won!")
+    typing("You survived Grimwood and made it to safety, you won!")
     time.sleep(1)
     play_again(func)
 

@@ -1,10 +1,12 @@
 INTRO_MSG = ("""
-            Your story begins with you waking up in the middle of a forest, surrounded by the dark of the night with no memory of how you got there.
-          
-            All you do know, as reality starts to sink in, is that you have to get out of there... alive.
+ Your story begins with you waking up in the middle of a forest, 
+ surrounded by the dark of the night with no memory of how you got there.
+
+All you do know, as reality starts to sink in, is that you have to 
+get out of there... alive.
            
-            Make the right choices, and you just might succeed.
-            """)
+Make the right choices, and you just might succeed.
+""")
 
 DEAD_GROVE = ("""
             You walk towards the grove and stop at the entrace to look around, the fruits looks delicious.

@@ -14,12 +14,19 @@ def start_game():
     Then provides to option to start the game
     """
     typing("Well, hello stranger.\n")
-    player_name = input("Tell me your name.. >\n")
+
+    while True:
+        player_name = input("Tell me your name.. >\n")
+        if player_name == "":
+            print("Please... your name.")
+        else:
+            break
+
     typing(f"I see... {player_name}. Welcome.\n")
     # time.sleep(1)
 
-    # typing(story.INTRO_MSG)
-    # time.sleep(1)
+    typing(story.INTRO_MSG)
+    time.sleep(1)
     typing(f"Good luck {player_name}....\n")
     typing(input("Press enter to start game...\n"))
     intro_scene()
