@@ -12,6 +12,24 @@ BANNER = print("""
 
 """)
 
+YOU_DIED = ("""
+                   YOU DIED      
+                         
+                                ▄▄▄░
+           ▄▄▄▄░              ░█████░    
+          ░████▌               ▐███▀   ▐▌
+      ░    ░▀▀▀░                       █
+       ▓                             ▐▌
+        █▒                          ▐▓
+         ▀▓▄                     ▄▐▌█
+           ▒▀▌▄ ▄              ▄▐▌▐▌▌
+             ▐████▀█▐▓▐█▒██▐█▒▀██▐░
+              ▀▀▌▀█░▓▓▐▓░▓▒░▀░▌█▌
+                 ░▀▐▐▓░█▒▓▒▐▓▐░
+                     ▀ █▒█▌░▀
+      
+      """)
+
 
 def typing(text):
     """
@@ -56,6 +74,7 @@ def game_over(message, func):
     """
     typing(message)
     time.sleep(1)
+    print(YOU_DIED)
     play_again(func)
 
 
