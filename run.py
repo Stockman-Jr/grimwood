@@ -158,6 +158,27 @@ def creatures_den():
     """
 
 
+def abandoned_house_encounter():
+    """
+    This scene will play out if user found old flashlight
+    Story will progress and user will be prompted to make another choice
+    to proceed further
+    """
+    global old_flashlight
+
+    typing(story.HOUSE_ENCOUNTER)
+    time.sleep(1)
+    choices = input_checker("""What will you do?(a/b/c)
+                            
+                            A. You're frozen in fear, you stay still and watch as you squeeze the old flashlight
+
+                            B. Slap yourself to release you from the paralyzing fear, and RUN!!!
+
+                            C. Turn off the flashlight and hide under the desk.
+    
+                            >>> """, OPTIONS[0:3])
+
+
 def abandoned_house():
     """
     If user chose south from three_fork_path, this function will play out.
