@@ -170,13 +170,24 @@ def abandoned_house_encounter():
     time.sleep(1)
     choices = input_checker("""What will you do?(a/b/c)
                             
-                            A. You're frozen in fear, you stay still and watch as you squeeze the old flashlight
+                            A. Slap yourself to release you from the paralyzing fear, and RUN!!!
 
-                            B. Slap yourself to release you from the paralyzing fear, and RUN!!!
+                            B. You're frozen in fear, you stay still and watch as you squeeze the old flashlight
 
-                            C. Turn off the flashlight and hide under the desk.
+                            C. Turn off the flashlight, hold your breath and hide under the desk.
     
                             >>> """, OPTIONS[0:3])
+    if choices == "a":
+        game_over("""You tried to run, but trying to outrun this 
+        creature proved to be fatal... You died.""", start_game)
+    elif choices == "b":
+        typing(story.HOUSE_ENCOUNTER_OUTCOME)
+        #typing("'What the heck just happened?'")
+    elif choices == "c":
+        game_over("""You close your eyes and cover your mouth,
+        hoping for the nightmare to be over..
+        And so your hopes came true, but not in a good way..
+        You died.""", start_game)
 
 
 def abandoned_house():

@@ -68,3 +68,17 @@ HOUSE_ENCOUNTER = ("""
            You are frozen in horror, trying to decide what to do, when a huge clawed hand splinters the window frame.
            Looks like it's about to crouch and take a look inside.
            """)
+
+HOUSE_ENCOUNTER_OUTCOME = ("""
+The creature crouches slowly, and after what feels like forever, 
+a pair of eyes and an abnormally large grin glowing in white appear
+in the window.
+
+Your heart is beating so fast you feel like you could die any second
+from a heart attack, but you close your eyes and stretch out your arm
+as far as you can towards the creature, holding the old flashlight.
+
+A painfully loud, distorted scream pierces your ears and then.. silence.
+
+After a minute of silence you open your eyes, and the creature has vanished.
+""")
