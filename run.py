@@ -1,6 +1,6 @@
 import time
 import story
-from functions import typing, input_checker
+from functions import typing, input_checker, win_game, game_over
 
 modern_flashlight = False
 old_flashlight = False
@@ -64,8 +64,8 @@ def fruit_grove():
         "What will you do?(a/b) >>", OPTIONS[0:2])
 
     if choices == "a":
-        typing(story.DEAD_GROVE)
-        exit()
+        # typing(story.DEAD_GROVE)
+        game_over("You died.. Didn't last very long did you?\n", start_game)
     elif choices == "b":
         three_fork_path()
 

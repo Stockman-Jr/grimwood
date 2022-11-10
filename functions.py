@@ -34,10 +34,21 @@ def win_game(message):
     typing("You made it to safety, you won!")
 
 
-def game_over(message):
+def game_over(message, func):
     """
     This function will be called if user lose the game
     and display a message
     """
     typing(message)
-    typing("You died")
+    time.sleep(1)
+    play_again(func)
+
+
+def play_again(restart):
+    print("Would you like to play again?\n")
+    choice = input("Type 'yes' or click button at the top to restart game. >> ")
+    if choice == "yes":
+        restart()
+    else:
+        print("Wise choice... Thanks for playing.")
+        exit()
