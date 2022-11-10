@@ -48,7 +48,7 @@ As you stand there, horrified by your discovery,
 the sound you just made seems to have drawn unwanted attention.
 
 You look up towards the tunnel and see the big eyes with the terrifying grin
-looking at you... then it charges.
+looking at you...
 """)
 
 DEN_SURVIVAL = ("""

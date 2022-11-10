@@ -108,7 +108,8 @@ def three_fork_path():
     elif choices == "south" and modern_flashlight is True:
         abandoned_house()
     elif choices == "south" and modern_flashlight is False:
-        game_over("""As you walk for hours, struggling to see
+        game_over("""
+        As you walk for hours, struggling to see
         in the darkness, you start to realise that you're lost.
         And as you entered a denser, almost pitch-black part of the woods,
         you didn't see that you were walking towards a cliff..\n""", start_game)
@@ -165,8 +166,22 @@ def creatures_den():
     This is where the creature lives, and user will only survive if
     old_flashlight is True.
     """
-    global old_flashlight
-    global modern_flashlight
+    # global old_flashlight
+    # global modern_flashlight
+
+    if modern_flashlight is True:
+        typing(story.DEN_DEATH)
+        game_over("then it charges.", start_game)
+    elif old_flashlight is True:
+        typing(story.DEN_SURVIVAL)
+        win_game("""As you reach the end of the tunnel
+         you see city lights flickering in the distance..""", start_game)
+    else:
+        game_over("""
+        You walk into pitch-black darkness, you can't see a thing.
+        But the path is flat and straight, so you keep walking.
+        Suddenly you feel something extremely sharp, pierce through your chest.
+        """, start_game)
 
 
 def abandoned_house_encounter():
