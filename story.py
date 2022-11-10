@@ -27,10 +27,62 @@ FOUND_ITEM = ("""
 ENCOUNTER = ("""
             As you're crouched on the trail, proudly inspecting your newfound treasure, the hairs on your neck suddenly starts to rise..
 
-            You're being watched. 
+            You're being watched.
 
             Some strange distorted noises emits from the direction you were walking towards.
             """)
+
+DEN_DEATH = ("""
+You enter the pitch-black path, but since you have your flashlight you
+can see just fine.
+Eventually you see the narrow path ends and reveals a big, open space
+surrounded by trees.
+And on the other side you see... a tunnel! This must be the way out!
+
+As you take a few steps into this strange, open space  you hear something
+crunch beneath your feet.
+You shine the light on your feet, and your heart drops to your stomach...
+Bones, everywhere.
+
+As you stand there, horrified by your discovery,
+the sound you just made seems to have drawn unwanted attention.
+
+You look up towards the tunnel and see the big eyes with the terrifying grin
+looking at you... then it charges.
+""")
+
+DEN_SURVIVAL = ("""
+You enter the pitch-black path, and your old flashligt isn't helping you see
+much, but the path is easily navigated.
+Soon you see the narrow path ending and you walk into a big, open space.
+
+As you take a few steps into the open space , you hear something crunch
+beneath your feet.
+You shine the light on your feet, and your heart drops to your stomach...
+
+Bones, everywhere. This must be where it lives.
+Although horrified by what you've just discovered, you keep going,
+and find yourself standing in front of an entrance to a tunnel.
+
+You see the glowing eyes along with the terrifying grin appear in
+the entrance before you.
+But it somehow feel like it's expression has changed,
+to something more distressed.
+
+You walk towards it with your arm out holding the old flashlight to confirm
+your theory, and it keeps it's distance!
+Confident in that you now know your'e carrying
+something special, you charge forward!
+
+Distorted screams echoes in the tunnel as the creature is desperatly 
+trying to attack or flee, and you notice that parts of its body are
+in a state of decay, withering away.
+
+Eventually the screams stops as the creature have seemed to disappear.
+Dead or not, you've fought it off.
+
+As you reach the end of the tunnel you can see city lights in the distance..
+""")
 
 HOUSE = ("""
            You start walking, continuing south off the path. 

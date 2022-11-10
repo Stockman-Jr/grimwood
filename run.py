@@ -136,7 +136,7 @@ def flashlight_scene():
         win_game("""For some reason, unbeknownst to anyone,
         you decided to not keep the flashlight and kicked 
         it far off into the woods.
-        
+
         You kept walking east as you were pondering over this and that.
         After a few hours of walking, you notice the lights of a town
         in front of you...""", start_game)
@@ -165,6 +165,8 @@ def creatures_den():
     This is where the creature lives, and user will only survive if
     old_flashlight is True.
     """
+    global old_flashlight
+    global modern_flashlight
 
 
 def abandoned_house_encounter():
