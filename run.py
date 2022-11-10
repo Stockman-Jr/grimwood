@@ -99,7 +99,7 @@ def three_fork_path():
         "Maybe you should ignore the paths and continue south, off piste.\n")
 
     choices = input_checker(
-        "Where will you go?(west/east/south) >> ", OPTIONS[5:8])
+        "Where will you go?(west/east/south) >> ", OPTIONS[4:8])
 
     if choices == "east":
         flashlight_scene()
