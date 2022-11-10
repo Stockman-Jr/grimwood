@@ -17,3 +17,4 @@ def input_checker(prompt, opts):
         choice = input(prompt)
 
     return choice
+

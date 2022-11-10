@@ -139,8 +139,8 @@ def flashlight_scene():
 
 def creatures_den():
     """
-    If user chose east from three_fork_path, this function will play out.
-    This is where the creature lives, and user will only survive if 
+    If user chose west from three_fork_path, this function will play out.
+    This is where the creature lives, and user will only survive if
     old_flashlight is True.
     """
 

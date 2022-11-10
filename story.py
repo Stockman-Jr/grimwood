@@ -49,11 +49,13 @@ HOUSE = ("""
 
 HOUSE_ITEM = ("""
            You direct your flashlight towards the floor underneath the desk, and you notice something silver sticking out from a pile of notes.
-           You crouch down and pick it up.
+           You put your flashlight down and crouch down to pick it up. 
           
-            It looks like a really old flashlight in the shape of a square with a handle, you've never seen anything like it.
+           It looks like a very old flashlight in the shape of a square with a handle, you've never seen anything like it.
           
            There's some kind of switch on the back, you turn it and incredibly enough, it works!
+
+           The light it emits is weak though, and it feels very strange.. Warm and comforting somehow. 
            """)
 
 HOUSE_ENCOUNTER = ("""
