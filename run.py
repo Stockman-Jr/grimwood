@@ -4,6 +4,7 @@ from functions import typing, input_checker, win_game, game_over
 
 modern_flashlight = False
 old_flashlight = False
+visited = False
 OPTIONS = ['a', 'b', 'c', 'd', 'east', 'south', 'west']
 
 
@@ -29,18 +30,26 @@ def intro_scene():
     First scene of the game, where user will be able
     to choose which direction to take
     """
-  
-    # typing(
-    #   "It's almost pitch black, you give yourself a minute to adjust your eyes to the darkness.\n")
-    typing(
-        "You stand up and look around, you're standing on a path that splits in two directions.\n")
+    global visited
+    if visited is False:
+        # typing(
+        #   "It's almost pitch black, you give yourself a minute to adjust your eyes to the darkness.\n")
+        typing(
+            "You stand up and look around, you're standing on a path that splits in two directions.\n")
+    else:
+        typing(
+            "You're back on the path that splits in two directions.\n")
     time.sleep(1)
 
     choices = input_checker(
         "Which way will you go? Type east or south.\n", OPTIONS[4:7])
 
-    if choices == "east":
+    if choices == "east" and visited is False:
         fruit_grove()
+    elif choices == "east" and visited is True:
+        typing("You probably shouldn't go back there..\n\n")
+        time.sleep(0.5)
+        return intro_scene()
     elif choices == "south":
         three_fork_path()
 
@@ -50,6 +59,8 @@ def fruit_grove():
     If user chose east from intro scene, this function will play out.
     Some story will be told and then user will be provided with two options.
     """
+    global visited
+
     typing(
         "You've been walking for ten minutes when you suddenly stop.\n ")
     typing(
@@ -67,7 +78,9 @@ def fruit_grove():
         # typing(story.DEAD_GROVE)
         game_over("You died.. Didn't last very long did you?\n", start_game)
     elif choices == "b":
-        three_fork_path()
+        visited = True
+        intro_scene()
+        return visited
 
 
 def three_fork_path():

@@ -31,7 +31,10 @@ def win_game(message):
     and display a message
     """
     typing(message)
+    print("•·✦º✦·» ヽ(´▽`)/ «·✦º✦·•\n")
     typing("You made it to safety, you won!")
+    time.sleep(1)
+    play_again(func)
 
 
 def game_over(message, func):
