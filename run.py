@@ -42,7 +42,7 @@ def intro_scene():
     time.sleep(1)
 
     choices = input_checker(
-        "Which way will you go? Type east or south.\n", OPTIONS[4:7])
+        "Which way will you go? Type east or south.\n", OPTIONS[4:6])
 
     if choices == "east" and visited is False:
         fruit_grove()
@@ -108,8 +108,10 @@ def three_fork_path():
     elif choices == "south" and modern_flashlight is True:
         abandoned_house()
     elif choices == "south" and modern_flashlight is False:
-        print("dead")
-        exit()
+        game_over("""As you walk for hours, struggling to see
+        in the darkness, you start to realise that you're lost.
+        And as you entered a denser, almost pitch-black part of the woods,
+        you didn't see that you were walking towards a cliff..\n""", start_game)
 
 
 def flashlight_scene():
@@ -131,7 +133,13 @@ def flashlight_scene():
         # typing(story.ENCOUNTER)
     elif userInput == "no":
         modern_flashlight = False
-        # typing(story.ENCOUNTER)
+        win_game("""For some reason, unbeknownst to anyone,
+        you decided to not keep the flashlight and kicked 
+        it far off into the woods.
+        
+        You kept walking east as you were pondering over this and that.
+        After a few hours of walking, you notice the lights of a town
+        in front of you...""", start_game)
 
     typing("You take a second to think...\n")
 
@@ -142,8 +150,9 @@ def flashlight_scene():
         "What will you do?(a/b) >> ", OPTIONS[0:2])
 
     if choices == "a":
-        print("dead")
-        exit()
+        game_over("""Whatever it was, it pinpointed your location
+        once you shone your light towards it, and it was fast.
+        """, start_game)
     elif choices == "b":
         three_fork_path()
 
@@ -168,15 +177,16 @@ def abandoned_house_encounter():
 
     typing(story.HOUSE_ENCOUNTER)
     time.sleep(1)
-    choices = input_checker("""What will you do?(a/b/c)
+    choices = input_checker("""
+    What will you do?(a/b/c)
                             
-                            A. Slap yourself to release you from the paralyzing fear, and RUN!!!
+    A. Slap yourself to release you from the paralyzing fear, and RUN!!!
 
-                            B. You're frozen in fear, you stay still and watch as you squeeze the old flashlight
+    B. You're frozen in fear, you stay still and watch as you squeeze the old flashlight
 
-                            C. Turn off the flashlight, hold your breath and hide under the desk.
+    C. Turn off the flashlight, hold your breath and hide under the desk.
     
-                            >>> """, OPTIONS[0:3])
+    >>> """, OPTIONS[0:3])
     if choices == "a":
         game_over("""You tried to run, but trying to outrun this 
         creature proved to be fatal... You died.""", start_game)
@@ -217,8 +227,9 @@ def abandoned_house():
             """What would you like to investigate?(a/b/c/d) >> """, OPTIONS[0:4])
 
         if choices == "c":
-            typing(story.HOUSE_ITEM)
+            #typing(story.HOUSE_ITEM)
             old_flashlight = True
+            abandoned_house_encounter()
             return old_flashlight
         elif choices == "a":
             print(
@@ -235,7 +246,7 @@ def abandoned_house():
             print("Creepy books, notes written in a language you can't depict and a tin box that's empty... Nothing useful here.")
     else:
         typing(story.HOUSE_ENCOUNTER)
-        typing("And so it was all over within seconds...")
+        game_over("And so it was all over within seconds...", start_game)
 
 
 start_game()
