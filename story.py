@@ -27,8 +27,8 @@ You arrive at the source of the light you see a small leaf pile on
 the left side of the trail where the light is emanating from.
 
 You dig through the leafpile and find a flashlight! A strong one
-too, how strangely convenient!
-            """)
+too, how strangely convenient! With this you can navigate the woods safely!
+""")
 
 ENCOUNTER = ("""
 As you're crouched on the trail, proudly inspecting your newfound
@@ -73,20 +73,20 @@ Although horrified by what you've just discovered, you keep going,
 and find yourself standing in front of an entrance to a tunnel.
 
 You see the glowing eyes along with the terrifying grin appear in
-the entrance before you.
-But it somehow feel like it's expression has changed,
-to something more distressed.
+the entrance before you. But something is different.
+That sinister, sanguine expression has changed into something more distressed,
+and hesitant.
 
 You walk towards it with your arm out holding the old flashlight to confirm
 your theory, and it keeps it's distance!
 Confident in that you now know your'e carrying
 something special, you charge forward!
 
-Distorted screams echoes in the tunnel as the creature is desperatly 
+Distorted screams echoes in the tunnel as the creature is desperatly
 trying to attack or flee, and you notice that parts of its body are
 in a state of decay, withering away.
 
-Eventually the screams stops as the creature have seemed to disappear.
+Eventually the screams stops as the creature disappears into thin air.
 Dead or not, you've fought it off.
 
 As you reach the end of the tunnel you can see city lights in the distance..
@@ -150,4 +150,29 @@ as far as you can towards the creature, holding the old flashlight.
 A painfully loud, distorted scream pierces your ears and then.. silence.
 
 After a minute of silence you open your eyes, and the creature has vanished.
+""")
+
+SOUTH_SURVIVAL = ("""
+You kept going south.
+The old flashlight isn't that helpful in this darkness,
+but if you walk slowly and watch your step, you'll be fine.
+As you navigated through the woods, you would notice the creature lurking
+behind trees, watching your every step.
+
+The creature was desperate to have you, but something made it hesitate.
+And for some reason, although the old flashlight would not let you see
+your surroundings very well, you could see the creature perfectly,
+even at a distance.
+
+You'd notice that a small part of its body was in a
+state of decay, withering away..
+You walked for hours with the creature lurking behind,
+keeping its distance.
+
+Finally you made it out of the woods as dawn was about to break,
+and spotted a road further down.
+
+You looked back at the woods once more and saw the creature, still watching.
+The hesitant look was gone... now it looked enraged, filled with hatred.
+You looked at the old flashlight.
 """)

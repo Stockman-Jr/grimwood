@@ -24,7 +24,7 @@ def start_game():
             break
 
     typing(f"I see... {player_name}. Welcome.\n")
-    # time.sleep(1)
+    time.sleep(1)
 
     typing(story.INTRO_MSG)
     time.sleep(1)
@@ -86,7 +86,7 @@ def fruit_grove():
     Go back and head south instead.\n\n""")
 
     choices = input_checker(
-        "What will you do?(a/b) >>", OPTIONS[0:2])
+        "What will you do?(a/b) >> ", OPTIONS[0:2])
 
     if choices == "a":
         # typing(story.DEAD_GROVE)
@@ -141,7 +141,7 @@ def flashlight_scene():
     global modern_flashlight
     typing(story.FOUND_ITEM)
     time.sleep(1)
-    typing("Would you like to keep it? (yes/no)")
+    typing("Would you like to keep it?(yes/no) >> \n")
     userInput = input()
 
     if userInput == "yes":
@@ -172,7 +172,7 @@ def flashlight_scene():
     if choices == "a":
         game_over("""
         Whatever it was, it pinpointed your location
-        once you shone your light towards it, and it was fast.
+        once you shone your light towards it, and it was fast..
         """, start_game)
     elif choices == "b":
         three_fork_path()
@@ -189,7 +189,7 @@ def creatures_den():
 
     if modern_flashlight is True:
         typing(story.DEN_DEATH)
-        game_over("then it charges.", start_game)
+        game_over("then it charges..", start_game)
     elif old_flashlight is True:
         typing(story.DEN_SURVIVAL)
         win_game("""
@@ -230,7 +230,7 @@ def abandoned_house_encounter():
         creature proved to be fatal...""", start_game)
     elif choices == "b":
         typing(story.HOUSE_ENCOUNTER_OUTCOME)
-        # TODO
+        final_decisions()
     elif choices == "c":
         game_over("""
         You close your eyes and cover your mouth,
@@ -294,7 +294,27 @@ def abandoned_house():
             depict and a tin box that's empty... Nothing useful here.\n""")
     else:
         typing(story.HOUSE_ENCOUNTER)
-        game_over("And so it was all over within seconds...", start_game)
+        game_over("And so your death was inevitable...", start_game)
+
+
+def final_decisions():
+    typing("'What the heck just happened?'\n")
+    typing("No point in trying to grasp it, you gotta move on. Will you..\n")
+    typing("""
+        A. Go back to the path, off piste was a bad idea.
+
+        B. Continue south.\n""")
+
+    choices = input_checker("Where will you go? (a/b) >> ", OPTIONS[0:2])
+    if choices == "a":
+        three_fork_path()
+    elif choices == "b":
+        typing(story.SOUTH_SURVIVAL)
+        sleep.time(1)
+        win_game("""
+        'I should probaly keep this....'
+        you muttered to yourself as you made your way to safety.
+        """, start_game)
 
 
 start_game()

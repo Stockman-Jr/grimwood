@@ -1,3 +1,9 @@
+# Grimwood
+Grimwood is a command line game in the genre of text-based adventure/survival.
+It's the old but cliché story where the character wakes up in the middle of the woods with no memory of how they got there, and they're not alone.... 
+The user will navigate through the story by typing an option of their choice in the command line when prompted to.
+The goal of the game is to make the right choices and make it out of the woods alive.
+
 - - - 
 
 ## Table of Contents
