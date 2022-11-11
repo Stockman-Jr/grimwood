@@ -50,7 +50,7 @@ def input_checker(prompt, opts):
     choice = input(prompt)
 
     while choice not in opts:
-        print(Fore.CYAN + f"Please enter a valid choice {opts}" + Fore.RESET)
+        print(Fore.BLUE + f"Please enter a valid choice {opts}" + Fore.RESET)
         choice = input(prompt)
 
     return choice

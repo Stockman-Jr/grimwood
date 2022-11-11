@@ -83,12 +83,17 @@ The goal of the game is to make the right choices and make it out of the woods a
 ## Technologies Used
 
 ### Main Languages
-
+  * Python
 
 ### Frameworks, Libraries & Programs
+  * Python libraries used:
+      * colorama
+      * time
+      * sys
   * [GitHub](https://github.com/) - To save and store files for the website.
   * Git - For version control.
-  * Vistual Studio Code(desktop) 
+  * Visual Studio Code(desktop) - for testing and experimenting with code
+  * LucidChart - for creating a flow chart to map out the game
 ---
 
 ## Deployment

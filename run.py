@@ -20,10 +20,10 @@ def start_game():
 
     while True:
         player_name = input("Tell me your name.. >\n")
-        if player_name == "":
-            print("Please... your name.")
-        else:
+        if player_name.isalpha():
             break
+        else:
+            typing("Please.. give me a name.")
 
     typing(f"I see... {player_name}. Welcome.\n")
     time.sleep(1)
