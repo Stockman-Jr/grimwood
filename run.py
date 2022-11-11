@@ -1,11 +1,13 @@
 import time
 import story
 from functions import typing, input_checker, win_game, game_over
+from colorama import Style
 
 modern_flashlight = False
 old_flashlight = False
 visited = False
 OPTIONS = ['a', 'b', 'c', 'd', 'east', 'south', 'west']
+print(Style.BRIGHT)
 
 
 def start_game():
@@ -45,7 +47,7 @@ def intro_scene():
         eyes to the darkness.\n""")
         typing("""
         You stand up and look around, you're standing on a path that
-        splits in two directions.\n""")
+        splits in two directions.\n\n""")
     else:
         typing(
             "You're back on the path that splits in two directions.\n")

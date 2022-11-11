@@ -2,7 +2,7 @@ import time
 import sys
 from colorama import Fore
 
-BANNER = print("""
+BANNER = print(Fore.RED + """
        ▄█▀─▄▄▄▄▄▄▄─▀█▄
        ▀█████████████▀
        ────█▄███▄█
@@ -11,7 +11,7 @@ BANNER = print("""
 █▀▀ █▀█ █ █▀▄▀█ █░█░█ █▀█ █▀█ █▀▄
 █▄█ █▀▄ █ █░▀░█ ▀▄▀▄▀ █▄█ █▄█ █▄▀ 
 
-""")
+""" + Fore.RESET)
 
 YOU_DIED = ("""
 
@@ -50,7 +50,7 @@ def input_checker(prompt, opts):
     choice = input(prompt)
 
     while choice not in opts:
-        print(f"Please enter a valid choice {opts}")
+        print(Fore.CYAN + f"Please enter a valid choice {opts}" + Fore.RESET)
         choice = input(prompt)
 
     return choice

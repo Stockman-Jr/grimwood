@@ -1,16 +1,17 @@
 from colorama import Fore
 
-INTRO_MSG = ("""
- Your story begins with you waking up in the middle of a forest,
- surrounded by the dark of the night with no memory of how you got there.
+INTRO_MSG = (Fore.CYAN + """
+Your story begins with you waking up in the middle of a forest,
+surrounded by the dark of the night with no memory of how you got there.
 
 All you do know, as reality starts to sink in, is that you have to
 get out of there... alive.
 
 Make the right choices, and you just might succeed.
-""")
 
-DEAD_GROVE = ("""
+""" + Fore.RESET)
+
+DEAD_GROVE = (Fore.RED + """
 You walk towards the grove and stop at the entrace to look around,
 the fruits looks delicious.
 
@@ -22,17 +23,19 @@ you suddenly feel the ground beneath you give in..
 You wake up to find yourself  at the bottom of a pitfall.
 You look up and see a pair of glowing eyes with a huge grin
 looking down at you...
-            """)
 
-FOUND_ITEM = ("""
+""" + Fore.RESET)
+
+FOUND_ITEM = (Fore.CYAN + """
 You arrive at the source of the light you see a small leaf pile on
 the left side of the trail where the light is emanating from.
 
 You dig through the leafpile and find a flashlight! A strong one
 too, how strangely convenient! With this you can navigate the woods safely!
-""")
 
-ENCOUNTER = ("""
+""" + Fore.RESET)
+
+ENCOUNTER = (Fore.RED + """
 As you're crouched on the trail, proudly inspecting your newfound
 treasure, the hairs on your neck suddenly starts to rise..
 
@@ -40,9 +43,10 @@ You're being watched.
 
 Some strange distorted noises emits from the direction you were
 walking towards.
-            """)
 
-DEN_DEATH = ("""
+""" + Fore.RESET)
+
+DEN_DEATH = (Fore.RED + """
 You enter the pitch-black path, but since you have your flashlight you
 can see just fine.
 Eventually you see the narrow path ends and reveals a big, open space
@@ -59,9 +63,10 @@ the sound you just made seems to have drawn unwanted attention.
 
 You look up towards the tunnel and see the big eyes with the terrifying grin
 looking at you...
-""")
 
-DEN_SURVIVAL = ("""
+""" + Fore.RESET)
+
+DEN_SURVIVAL = (Fore.RED + """
 You enter the pitch-black path, and your old flashligt isn't helping you see
 much, but the path is easily navigated.
 Soon you see the narrow path ending and you walk into a big, open space.
@@ -92,9 +97,10 @@ Eventually the screams stops as the creature disappears into thin air.
 Dead or not, you've fought it off.
 
 As you reach the end of the tunnel you can see city lights in the distance..
-""")
 
-HOUSE = ("""
+""" + Fore.RESET)
+
+HOUSE = (Fore.CYAN + """
 You start walking, continuing south off the path.
 
 After a while you arrive at a small, abandoned house.  
@@ -110,9 +116,10 @@ You wonder what whomever was here was writing about, but it seems
 to be written in some language unkown to you.
 
 You look around...
-""")
 
-HOUSE_ITEM = ("""
+""" + Fore.RESET)
+
+HOUSE_ITEM = (Fore.CYAN + """
 You direct your flashlight towards the floor underneath the desk,
 and you notice something silver sticking out from a pile of notes.
 You put your flashlight down and crouch down to pick it up.
@@ -125,9 +132,10 @@ enough, it works!
 
 The light it emits is weak though, and it feels very strange.. Warm
 and comforting somehow.
-           """)
 
-HOUSE_ENCOUNTER = ("""
+""" + Fore.RESET)
+
+HOUSE_ENCOUNTER = (Fore.RED + """
 You suddenly hear twigs cracking outside the broken window.
 Something is outside.
 
@@ -138,9 +146,10 @@ covered in rippling shadows.
 You are frozen in horror, trying to decide what to do, when a huge
 clawed hand splinters the window frame.
 Looks like it's about to crouch and take a look inside.
-           """)
 
-HOUSE_ENCOUNTER_OUTCOME = ("""
+""" + Fore.RESET)
+
+HOUSE_ENCOUNTER_OUTCOME = (Fore.RED + """
 The creature crouches slowly, and after what feels like forever,
 a pair of eyes and an abnormally large grin glowing in white appear
 in the window.
@@ -152,9 +161,10 @@ as far as you can towards the creature, holding the old flashlight.
 A painfully loud, distorted scream pierces your ears and then.. silence.
 
 After a minute of silence you open your eyes, and the creature has vanished.
-""")
 
-SOUTH_SURVIVAL = ("""
+""" + Fore.RESET)
+
+SOUTH_SURVIVAL = (Fore.RED + """
 You kept going south.
 The old flashlight isn't that helpful in this darkness,
 but if you walk slowly and watch your step, you'll be fine.
@@ -177,4 +187,5 @@ and spotted a road further down.
 You looked back at the woods once more and saw the creature, still watching.
 The hesitant look was gone... now it looked enraged, filled with hatred.
 You looked at the old flashlight.
-""")
+
+""" + Fore.RESET)
