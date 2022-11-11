@@ -30,7 +30,7 @@ looking down at you...
 """ + Fore.RESET)
 
 FOUND_ITEM = (Fore.CYAN + """
-You arrive at the source of the light you see a small leaf pile on
+You arrive at the source of the light and you notice a small leaf pile on
 the left side of the trail where the light is emanating from.
 
 You dig through the leafpile and find a flashlight! A strong one

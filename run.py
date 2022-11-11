@@ -13,7 +13,7 @@ print(Style.BRIGHT)
 def start_game():
     """
     Prompts user for a name, gives a short introduction
-    Then provides to option to start the game
+    Then provides the option to start the game
     """
 
     typing("Well, hello stranger.\n")
@@ -30,7 +30,7 @@ def start_game():
 
     typing(story.INTRO_MSG)
     time.sleep(1)
-    typing(f"Good luck {player_name}....\n")
+    typing(f"Good luck {player_name}....\n\n")
     typing(input("Press enter to start game...\n"))
     intro_scene()
 
@@ -48,13 +48,14 @@ def intro_scene():
         typing("""
         You stand up and look around, you're standing on a path that
         splits in two directions.\n\n""")
+        time.sleep(1)
     else:
         typing(
             "You're back on the path that splits in two directions.\n")
     time.sleep(1)
 
     choices = input_checker(
-        "Which way will you go? Type east or south.\n\n", OPTIONS[4:6])
+        "Which way will you go? Type east or south.\n", OPTIONS[4:6])
 
     if choices == "east" and visited is False:
         fruit_grove()
@@ -73,25 +74,24 @@ def fruit_grove():
     """
     global visited
 
-    typing("You've been walking for ten minutes when you suddenly stop.\n")
+    typing("You've been walking for awhile when you suddenly stop.\n")
     typing("""
     You see in front of you what looks like a small grove
     surrounded by trees bearing fruit.
     You stop to think..\n""")
-
-    typing("""
-    A. Some fruit might come in handy for your survival, after all you
+    time.sleep(1)
+    choices = input_checker("""
+     A. Some fruit might come in handy for your survival, after all you
     have no idea where you are and how long you might be
-    stuck in these woods. Go forward and pick up some fruit.\n""")
-    typing("""
-    B. Seems like a waste of time, you're not hungry.
-    Go back and head south instead.\n\n""")
+    stuck in these woods. Go forward and pick up some fruit.
 
-    choices = input_checker(
-        "What will you do?(a/b) >> ", OPTIONS[0:2])
+    B. Seems like a waste of time, you're not hungry.
+    Go back and head south instead.
+
+    What will you do?(a/b) >> """, OPTIONS[0:2])
 
     if choices == "a":
-        # typing(story.DEAD_GROVE)
+        typing(story.DEAD_GROVE)
         game_over("Didn't last very long did you?\n", start_game)
     elif choices == "b":
         visited = True
@@ -108,14 +108,13 @@ def three_fork_path():
 
     typing("""
     You arrive at a three-way-fork in the path.\n
-    You stop to think...\n""")
+    You stop to think...\n\n""")
+    time.sleep(1)
     typing("Looking east, you see a strange, faint light.\n")
-    typing("""
-    Looking west, the forest looks denser,
-    making it darker and harder to see.\n""")
+    typing("Looking west, the forest becomes denser, looks way too dark.\n")
     typing(
         "Maybe you should ignore the paths and continue south, off piste.\n\n")
-
+    time.sleep(1)
     choices = input_checker(
         "Where will you go?(west/east/south) >> ", OPTIONS[4:8])
 
@@ -159,15 +158,15 @@ def flashlight_scene():
 
         You kept walking east as you were pondering over this and that.
         After a few hours of walking, you notice the lights of a town
-        in front of you...""", start_game)
+        in front of you... How lame.""", start_game)
 
     typing("You take a second to think...\n")
-
+    time.sleep(1)
     typing("""
     A. It's probably your imagination, or some kind of animal.
     Direct your flashlight towards the sounds and see what it is.\n""")
     typing("B. Trust your instincs, flee! Run back to the three-way-fork.\n")
-
+    time.sleep(1)
     choices = input_checker(
         "What will you do?(a/b) >> ", OPTIONS[0:2])
 
@@ -247,6 +246,7 @@ def abandoned_house():
     User can only reach this point if modern_flashlight is True
     """
     global old_flashlight
+    global modern_flashlight
 
     typing(story.HOUSE)
     typing("""
@@ -255,43 +255,41 @@ def abandoned_house():
     typing("""
         In front of you there is a desk and a chair, with piles of notes
         and books scattered across the floor and desk.\n""")
-    typing("""
-        You should probably look around..
-        You think about where to start...\n""")
+    typing("You should probably look around..\n\n")
+    time.sleep(1)
 
-    print("""
-          A. Underneath the bed
-
-          B. Check the nightstand
-
-          C. Underneath the desk
-
-          D. Check what's on top of the desk
-
-          """)
     for choices in range(2):
         choices = input_checker("""
-        What would you like to investigate?(a/b/c/d) >>
-        """, OPTIONS[0:4])
+        What would you like to investigate?(a/b/c/d)
+
+        A. Underneath the bed
+
+        B. Check the nightstand
+
+        C. Underneath the desk
+
+        D. Check what's on top of the desk
+
+        >>  """, OPTIONS[0:4])
 
         if choices == "c":
             typing(story.HOUSE_ITEM)
             old_flashlight = True
+            modern_flashlight = False
             abandoned_house_encounter()
-            return old_flashlight
+            return old_flashlight, modern_flashlight
         elif choices == "a":
-            print(
-                """You go to the bed, crouch down and use your
-                   flashlight to see what's there..\n""")
-
-            print("Nothing but spiderwebs and dusty old notes..")
+            typing("""You go to the bed, crouch down and use your
+            flashlight to see what's there..\n""")
+            time.sleep(0.5)
+            print("Nothing but spiderwebs and dusty old notes..\n")
         elif choices == "b":
-            print("You go to the nightstand and open the drawers..")
-
-            print("Just trash, nothing useful.")
+            typing("You go to the nightstand and open the drawers..")
+            time.sleep(0.5)
+            print("Just trash, nothing useful.\n")
         elif choices == "d":
-            print("You go to the desk to check what's on it..")
-
+            typing("You go to the desk to check what's on it..\n")
+            time.sleep(0.5)
             print("""Creepy books, notes written in a language you can't
             depict and a tin box that's empty... Nothing useful here.\n""")
     else:
@@ -302,17 +300,19 @@ def abandoned_house():
 def final_decisions():
     typing("'What the heck just happened?'\n")
     typing("No point in trying to grasp it, you gotta move on. Will you..\n")
-    typing("""
-        A. Go back to the path, off piste was a bad idea.
+    time.sleep(1)
+    choices = input_checker("""
+     A. Go back to the path, off piste was a bad idea.
 
-        B. Continue south.\n""")
+     B. Continue south.
 
-    choices = input_checker("Where will you go? (a/b) >> ", OPTIONS[0:2])
+     Where will you go? (a/b) >> 
+    """, OPTIONS[0:2])
     if choices == "a":
         three_fork_path()
     elif choices == "b":
         typing(story.SOUTH_SURVIVAL)
-        sleep.time(1)
+        time.sleep(1)
         win_game("""
         'I should probaly keep this....'
         you muttered to yourself as you made your way to safety.

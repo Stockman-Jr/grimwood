@@ -46,6 +46,19 @@ The goal of the game is to make the right choices and make it out of the woods a
 ## Features
 
 ### Existing Features
+#### Start screen
+The starting screen features an ascii art banner, and will ask the user to provide a name. The name will only be accepted if it only contains letters.
+A short introduction message will then be displayed for the user, and let them know how to play the game.
+The user will then be able to press enter to start the game.
+
+The purpose of this is to introduce the user to the story and how to play the game.
+
+#### Displaying text contents
+
+
+#### Player prompts
+
+#### Winning and losing
 
 
 
