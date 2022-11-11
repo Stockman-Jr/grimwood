@@ -1,3 +1,5 @@
+from colorama import Fore
+
 INTRO_MSG = ("""
  Your story begins with you waking up in the middle of a forest,
  surrounded by the dark of the night with no memory of how you got there.

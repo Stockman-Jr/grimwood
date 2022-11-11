@@ -1,5 +1,6 @@
 import time
 import sys
+from colorama import Fore
 
 BANNER = print("""
        ▄█▀─▄▄▄▄▄▄▄─▀█▄
