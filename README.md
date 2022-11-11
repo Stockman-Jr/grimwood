@@ -26,7 +26,19 @@ The goal of the game is to make the right choices and make it out of the woods a
 
   
 - - -
-## User Stories 
+## User Stories
+
+### As a user playing the game I want..
+  * Clear instructions
+  * The game content to be displayed nicely so that it's easy to read
+  * For the game to be engaging and fun enough to play again
+  * To experience different outcomes based on my choices
+
+### As a site owner I want..
+  * For input to be handled efficiently
+  * To provide a fun and engaging gaming experience
+  * For the game to be clear to users at all times
+
 - - -
 ## Design
 
