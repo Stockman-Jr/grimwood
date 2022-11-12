@@ -27,12 +27,10 @@ def start_game():
     
     typing(f"I see... {player_name}. Welcome.\n")
     time.sleep(1)
-    # typing(story.INTRO_MSG)
-    # time.sleep(1)
+    typing(story.INTRO_MSG)
+    time.sleep(1)
     typing(f"Good luck {player_name}....\n\n")
     time.sleep(1)
-    #typing(input("Press enter to start game...\n"))
-    #intro_scene()
 
     player_menu(intro_scene)
 
@@ -45,11 +43,11 @@ def intro_scene():
     global visited
     if visited is False:
         typing("""
-        It's almost pitch black, you give yourself a minute to adjust your
-        eyes to the darkness.\n""")
+    It's almost pitch black, you give yourself a minute to adjust your
+    eyes to the darkness.\n""")
         typing("""
-        You stand up and look around, you're standing on a path that
-        splits in two directions.\n\n""")
+    You stand up and look around, you're standing on a path that
+    splits in two directions.\n\n""")
         time.sleep(1)
     else:
         typing(
@@ -83,7 +81,7 @@ def fruit_grove():
     You stop to think..\n""")
     time.sleep(1)
     choices = input_checker("""
-     A. Some fruit might come in handy for your survival, after all you
+    A. Some fruit might come in handy for your survival, after all you
     have no idea where you are and how long you might be
     stuck in these woods. Go forward and pick up some fruit.
 
@@ -164,13 +162,13 @@ def flashlight_scene():
 
     typing("You take a second to think...\n")
     time.sleep(1)
-    typing("""
+    choices = input_checker("""
     A. It's probably your imagination, or some kind of animal.
-    Direct your flashlight towards the sounds and see what it is.\n""")
-    typing("B. Trust your instincs, flee! Run back to the three-way-fork.\n")
-    time.sleep(1)
-    choices = input_checker(
-        "What will you do?(a/b) >> ", OPTIONS[0:2])
+    Direct your flashlight towards the sounds and see what it is.
+
+    B. Trust your instincs, flee! Run back to the three-way-fork.
+
+    What will you do?(a/b) >> """, OPTIONS[0:2])
 
     if choices == "a":
         game_over("""
@@ -197,7 +195,7 @@ def creatures_den():
         typing(story.DEN_SURVIVAL)
         win_game("""
         As you reach the end of the tunnel
-         you see city lights flickering in the distance..""", start_game)
+        you see city lights flickering in the distance..""", start_game)
     else:
         game_over("""
         You walk into pitch-black darkness, you can't see a thing.
@@ -218,7 +216,7 @@ def abandoned_house_encounter():
     time.sleep(1)
     choices = input_checker("""
     What will you do?(a/b/c)
-                         
+               
     A. Slap yourself to release you from the paralyzing fear, and RUN!!!
 
     B. You're frozen in fear, you stay still and watch as you squeeze the old
@@ -256,8 +254,9 @@ def abandoned_house():
         seems to have two drawers.\n""")
     typing("""
         In front of you there is a desk and a chair, with piles of notes
-        and books scattered across the floor and desk.\n""")
-    typing("You should probably look around..\n\n")
+        and books scattered across the floor and desk.
+   
+        You should probably look around..\n\n""")
     time.sleep(1)
 
     for choices in range(2):
@@ -281,7 +280,8 @@ def abandoned_house():
             abandoned_house_encounter()
             return old_flashlight, modern_flashlight
         elif choices == "a":
-            typing("""You go to the bed, crouch down and use your
+            typing("""
+            You go to the bed, crouch down and use your
             flashlight to see what's there..\n""")
             time.sleep(0.5)
             print("Nothing but spiderwebs and dusty old notes..\n")
@@ -292,8 +292,9 @@ def abandoned_house():
         elif choices == "d":
             typing("You go to the desk to check what's on it..\n")
             time.sleep(0.5)
-            print("""Creepy books, notes written in a language you can't
-            depict and a tin box that's empty... Nothing useful here.\n""")
+            print("Creepy books, notes written in a language "
+                  "you can't depict and a tin box that's "
+                  "empty... Nothing useful here.\n")
     else:
         typing(story.HOUSE_ENCOUNTER)
         game_over("And so your death was inevitable...", start_game)

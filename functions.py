@@ -72,7 +72,7 @@ def input_checker(prompt, opts):
     return choice
 
 
-def win_game(message):
+def win_game(message, func):
     """
     This function will be called if user clears the game
     and display a message
