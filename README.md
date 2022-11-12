@@ -131,6 +131,22 @@ Alot of the testing were also done in visual studio code, where I experimented w
 
 ## Deployment
 
+This project was deployed using heroku, steps to deployment are as follows:
+  * Sign up to heroku if you haven't, then check for a button labelled "New" at the top right of the dashboard.
+  * Click that button to display a dropdown menu and select "Create New App".
+  * This will take you to a new page, where you can enter your region and choose a name for your new app, which must be unique. Then click "Create App"
+  * On the next page, navigate to the "Settings" tab on the menu, and find the section called "Config Vars"
+  * Click on the button labelled "Config Vars" and add necessary key and value
+  * For this program, only one config var was needed: "PORT" as key and "8000" as value. Then click "Add".
+  * Navigate to "Buildpacks" underneath "Config Vars".
+  * Click "Add buildpacks", and add python and node.js.
+  * Make sure the the buildpacks are in the right order, with python at the top and node.js at the bottom, this is important. Save your changes.
+  * Scroll back to the top menu and click the "Deploy" tab.
+  * Here you'll have some options for deployment, I used github for this.
+  * Once you've clicked on the Github button you will be able to search for your Github repository and connect to it.
+  * Once connected, it's time to deploy. You can choose to deploy automatically or manually.
+  * For this deployment I chose automatic, which will update everytime you push.
+
 ---
 
 ## Credits
