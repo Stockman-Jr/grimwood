@@ -1,6 +1,7 @@
 import time
 import sys
 from colorama import Fore
+#import keyboard
 
 BANNER = print(Fore.RED + """
        ▄█▀─▄▄▄▄▄▄▄─▀█▄
@@ -41,6 +42,19 @@ def typing(text):
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.02)
+
+
+def player_menu(func):
+
+    while True:
+        print("Press enter to start game, or tab for instructions.")
+        if keyboard.read_key() == "enter":
+            func()
+            break
+        elif keyboard.read_key() == "tab":
+            print("""The rules are simple, you'll be provided with options to
+            choose from throughout the game, just type in the option you want
+            to choose when prompted to and press enter.""")
 
 
 def input_checker(prompt, opts):

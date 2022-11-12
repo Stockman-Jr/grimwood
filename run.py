@@ -24,15 +24,17 @@ def start_game():
             break
         else:
             typing("Please.. give me a name.")
-
+    
     typing(f"I see... {player_name}. Welcome.\n")
     time.sleep(1)
-
-    typing(story.INTRO_MSG)
-    time.sleep(1)
+    # typing(story.INTRO_MSG)
+    # time.sleep(1)
     typing(f"Good luck {player_name}....\n\n")
+    time.sleep(1)
     typing(input("Press enter to start game...\n"))
     intro_scene()
+
+    # player_menu(intro_scene)
 
 
 def intro_scene():
@@ -137,7 +139,7 @@ def flashlight_scene():
     If user chose west from three_fork_path, this function will play out.
     The user fill find a flashlight and choose whether to keep it or not.
     That choice will update the global modern_flashlight variable.
-    A scene will then play out and promp user to choose from two options.
+    A scene will then play out and prompt user to choose from two options.
     """
     global modern_flashlight
     typing(story.FOUND_ITEM)
@@ -153,7 +155,7 @@ def flashlight_scene():
         modern_flashlight = False
         win_game("""
         For some reason, unbeknownst to anyone,
-        you decided to not keep the flashlight and kicked
+        you decided to not keep the flashlight and kicked 
         it far off into the woods.
 
         You kept walking east as you were pondering over this and that.
@@ -195,7 +197,7 @@ def creatures_den():
         typing(story.DEN_SURVIVAL)
         win_game("""
         As you reach the end of the tunnel
-        you see city lights flickering in the distance..""", start_game)
+         you see city lights flickering in the distance..""", start_game)
     else:
         game_over("""
         You walk into pitch-black darkness, you can't see a thing.
@@ -216,7 +218,7 @@ def abandoned_house_encounter():
     time.sleep(1)
     choices = input_checker("""
     What will you do?(a/b/c)
-
+                         
     A. Slap yourself to release you from the paralyzing fear, and RUN!!!
 
     B. You're frozen in fear, you stay still and watch as you squeeze the old
@@ -262,13 +264,13 @@ def abandoned_house():
         choices = input_checker("""
         What would you like to investigate?(a/b/c/d)
 
-        A. Underneath the bed
+          A. Underneath the bed
 
-        B. Check the nightstand
+          B. Check the nightstand
 
-        C. Underneath the desk
+          C. Underneath the desk
 
-        D. Check what's on top of the desk
+          D. Check what's on top of the desk
 
         >>  """, OPTIONS[0:4])
 

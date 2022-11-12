@@ -46,6 +46,8 @@ The goal of the game is to make the right choices and make it out of the woods a
 ## Features
 
 ### Existing Features
+
+
 #### Start screen
 The starting screen features an ascii art banner, and will ask the user to provide a name. The name will only be accepted if it only contains letters.
 A short introduction message will then be displayed for the user, and let them know how to play the game.
@@ -54,15 +56,22 @@ The user will then be able to press enter to start the game.
 The purpose of this is to introduce the user to the story and how to play the game.
 
 #### Displaying text contents
+Since this game is pretty heavy on the story part, I've done my best to make everything as clean and readable as possible using colorama library, whitespacing and new lines. The longer parts of the story are all colored text, and has been placed in a separate file to keep the main game file cleaner.
+The purpose of this is to not overwhelm the user and provide them with a structured and clean output, so that it's easy to keep up.
 
 
-#### Player prompts
+#### Player options
+The options provided will be displayed for the user along with a prompt that will mostly ask for a direction or a choice between a-d.
 
 #### Winning and losing
+If the user wins or lose the game, a function will be called to display a message. In both scenarios a prompt will also appear to ask the user if they want to play again, typing "yes" will restart the game, and any other key press will exit the game.
 
 
 
 ### Future Features
+  * I would like to implement more types of user interactions to the game, maybe provide some puzzles for the user to solve.
+  * More "rooms" and outcomes.
+
 
 
 ---
