@@ -65,6 +65,7 @@ The starting screen features an ascii art banner, and will ask the user to provi
 
 A short introduction message will then be displayed for the user, and let them know how to play the game.
 The user will then be able to press enter to start the game.
+
 ![Player Menu](assets/images/player_menu.png)
 ![How To Play](assets/images/how_to_play.png)
 
@@ -87,7 +88,8 @@ The options provided will be displayed for the user along with a prompt that wil
 If the user wins or lose the game, a function will be called to display a message followed by some ascii art.
 
 ![Game Over](assets/images/death_ascii.png)
-![Win Game]()
+
+![Win Game](assets/images/win_msg.png)
 
 In both scenarios a prompt will also appear to ask the user if they want to play again, typing "yes" will restart the game, and any other key press will exit the game.
 
@@ -126,15 +128,15 @@ Alot of the testing were also done in visual studio code, where I experimented w
   * **Testing** - Used print statements to make sure that I spliced the correct options.
   * **Fix** - Fixed by changing the numbers of the slice.
 
-  * **Expected** - 
-  * **Testing** - 
-  * **Result** -
-  * **Fix** - 
-
-
+#### Global variables does not reset
+  * **Expected** - For global variables to reset to their default value when choosing to play again.
+  * **Testing** - Tried importing the global variables from run.py to functions.py and resetting them in the play_again() function.
+  * **Result** - Importing from run.py was not the way to go as it caused ImportError.
+  * **Fix** - Added a new function to run.py, where I set the global variables to their default value, then made a call to the function in start_game()
 
 
 ### Unsolved bugs
+No known unsolved bugs.
  
 ---
 
