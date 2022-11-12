@@ -42,6 +42,8 @@ The goal of the game is to make the right choices and make it out of the woods a
 - - -
 ## Design
 
+### Story and flow chart mapping
+
 - - -
 ## Features
 
@@ -77,6 +79,8 @@ If the user wins or lose the game, a function will be called to display a messag
 ---
 
 ## Testing
+Print statements were used heavily throughout the project to identify errors or check if code were working correctly.
+Alot of the testing were also done in visual studio code, where I experimented with code and tested ideas.
 
 
 
@@ -89,7 +93,14 @@ If the user wins or lose the game, a function will be called to display a messag
 
 ### Bugs
 
-#### Bug
+#### Line too long, pep8
+  * **Fix** - Fixed by either shortening the text or changing them to multiline.
+
+#### Incorrect options displayed
+  * **Expected** - The options provided for the user would be taken from a global list by slicing it to get the desired options.
+  * **Testing** - Used print statements to make sure that I spliced the correct options.
+  * **Fix** - Fixed by changing the numbers of the slice.
+
   * **Expected** - 
   * **Testing** - 
   * **Result** -

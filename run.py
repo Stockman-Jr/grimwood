@@ -1,6 +1,6 @@
 import time
 import story
-from functions import typing, input_checker, win_game, game_over
+from functions import typing, input_checker, win_game, game_over, player_menu
 from colorama import Style
 
 modern_flashlight = False
@@ -31,10 +31,10 @@ def start_game():
     # time.sleep(1)
     typing(f"Good luck {player_name}....\n\n")
     time.sleep(1)
-    typing(input("Press enter to start game...\n"))
-    intro_scene()
+    #typing(input("Press enter to start game...\n"))
+    #intro_scene()
 
-    # player_menu(intro_scene)
+    player_menu(intro_scene)
 
 
 def intro_scene():

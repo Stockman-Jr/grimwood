@@ -7,10 +7,7 @@ surrounded by the dark of the night with no memory of how you got there.
 All you do know, as reality starts to sink in, is that you have to
 get out of there... alive.
 
-Play the game by typing one of the available options of your choosing
-when presented to you.
-
-Make the right choices, and you just might survive Grimwood.
+Make the right choices, and you just might succeed.
 
 """ + Fore.RESET)
 
