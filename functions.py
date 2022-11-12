@@ -46,7 +46,7 @@ def typing(text):
 
 def player_menu(func):
     while True:
-        print("Press enter to start game, or tab for instructions.\n")
+        print("Press enter to start game, or 'i' for instructions.\n")
         char = getch.getch()
         if char == "\n":
             func()
