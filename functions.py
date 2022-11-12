@@ -41,7 +41,7 @@ def typing(text):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.04)
+        time.sleep(0.02)
 
 
 def player_menu(func):
@@ -101,10 +101,15 @@ def game_over(message, func):
 
 
 def play_again(restart):
+    """
+    Will prompt user to type yes or click button
+    if they want tot play again
+    Any other input will exit game
+    """
     print("Would you like to play again?\n")
     choice = input("Type 'yes' or click button at the top to restart game\n")
     if choice == "yes":
         restart()
     else:
         print("Wise choice... Thanks for playing.")
-        sys.exit()
+        exit()

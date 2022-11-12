@@ -27,7 +27,7 @@ def start_game():
             break
         else:
             typing("Please.. give me a name.\n")
- 
+
     typing(f"I see... {player_name}. Welcome.\n")
     time.sleep(1)
     typing(story.INTRO_MSG)
@@ -77,7 +77,7 @@ def fruit_grove():
     """
     global visited
 
-    typing("You've been walking for awhile when you suddenly stop.\n")
+    typing("You've been walking for a while when you suddenly stop.\n")
     typing("""
     You see in front of you what looks like a small grove
     surrounded by trees bearing fruit.
@@ -113,13 +113,22 @@ def three_fork_path():
     You arrive at a three-way-fork in the path.\n
     You stop to think...\n\n""")
     time.sleep(1)
-    typing("Looking east, you see a strange, faint light.\n")
-    typing("Looking west, the forest becomes denser, looks way too dark.\n")
-    typing(
-        "Maybe you should ignore the paths and continue south, off piste.\n\n")
-    time.sleep(1)
-    choices = input_checker(
-        "Where will you go?(west/east/south) >> ", OPTIONS[4:8])
+    if modern_flashlight is True:
+        choices = input_checker("""
+    Looking west, the forest becomes denser, looks way too dark.
+
+    Maybe you should ignore the paths and continue south, off piste.
+
+    Where will you go?(west/south) >> """, OPTIONS[5:8])
+    else:
+        choices = input_checker("""
+    Looking east, you see a strange, faint light.
+
+    Looking west, the forest becomes denser, looks way too dark.
+
+    Maybe you should ignore the paths and continue south, off piste.
+
+    Where will you go?(west/east/south) >> """, OPTIONS[4:8])
 
     if choices == "east":
         flashlight_scene()
@@ -127,7 +136,7 @@ def three_fork_path():
         creatures_den()
     elif choices == "south" and modern_flashlight is True:
         abandoned_house()
-    elif choices == "south" and modern_flashlight is False:
+    elif choices == "south":
         game_over("""
         As you walk for hours, struggling to see
         in the darkness, you start to realise that you're lost.
@@ -221,7 +230,7 @@ def abandoned_house_encounter():
     time.sleep(1)
     choices = input_checker("""
     What will you do?(a/b/c)
-         
+
     A. Slap yourself to release you from the paralyzing fear, and RUN!!!
 
     B. You're frozen in fear, you stay still and watch as you squeeze the old
@@ -260,8 +269,8 @@ def abandoned_house():
     typing("""
         In front of you there is a desk and a chair, with piles of notes
         and books scattered across the floor and desk.
-   
-        You should probably look around..\n\n""")
+
+        You should probably investigate..\n\n""")
     time.sleep(1)
 
     for choices in range(2):
