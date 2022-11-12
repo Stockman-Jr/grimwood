@@ -121,31 +121,47 @@ Alot of the testing were also done in visual studio code, where I experimented w
 ### Frameworks, Libraries & Programs
   * Python libraries used:
       * colorama
-      * time
-      * sys
+      * getch
   * [GitHub](https://github.com/) - To save and store files for the website.
   * Git - For version control.
   * Visual Studio Code(desktop) - for testing and experimenting with code
   * LucidChart - for creating a flow chart to map out the game
+  * Heroku
 ---
 
 ## Deployment
 
 This project was deployed using heroku, steps to deployment are as follows:
   * Sign up to heroku if you haven't, then check for a button labelled "New" at the top right of the dashboard.
-  * Click that button to display a dropdown menu and select "Create New App".
-  * This will take you to a new page, where you can enter your region and choose a name for your new app, which must be unique. Then click "Create App"
+    * Click that button to display a dropdown menu and select "Create New App".
+    * This will take you to a new page, where you can enter your region and choose a name for your new app, which must be unique. Then click "Create App"
+  
   * On the next page, navigate to the "Settings" tab on the menu, and find the section called "Config Vars"
-  * Click on the button labelled "Config Vars" and add necessary key and value
-  * For this program, only one config var was needed: "PORT" as key and "8000" as value. Then click "Add".
-  * Navigate to "Buildpacks" underneath "Config Vars".
-  * Click "Add buildpacks", and add python and node.js.
-  * Make sure the the buildpacks are in the right order, with python at the top and node.js at the bottom, this is important. Save your changes.
+    * Click on the button labelled "Config Vars" and add necessary key and value
+    * For this program, only one config var was needed: "PORT" as key and "8000" as value. Then click "Add".
+    * Navigate to "Buildpacks" underneath "Config Vars".
+    * Click "Add buildpacks", and add python and node.js.
+    * Make sure the the buildpacks are in the right order, with python at the top and node.js at the bottom, this is important. Save your changes.
+
   * Scroll back to the top menu and click the "Deploy" tab.
-  * Here you'll have some options for deployment, I used github for this.
-  * Once you've clicked on the Github button you will be able to search for your Github repository and connect to it.
-  * Once connected, it's time to deploy. You can choose to deploy automatically or manually.
-  * For this deployment I chose automatic, which will update everytime you push.
+    * Here you'll have some options for deployment, I used github for this.
+    * Once you've clicked on the Github button you will be able to search for your Github repository and connect to it.
+    * Once connected, it's time to deploy. You can choose to deploy automatically or manually.
+    * For this deployment I chose automatic, which will update everytime you push.
+
+  ### Forking and cloning
+  If you'd want to experiment and work on this code you can fork or clone this project.
+  This will allow you do whatever you want without altering the original.
+
+  #### Steps to forking:
+  * In the repository, navigate to the "Fork" button which is located in the top-right of the page, next to "Star".
+  * Simply click on this button and a copy of this repository will be added to yours.
+
+  #### Cloning:
+  * Navigate to the top right of this repository and find the button labelled "Code", and click to display a dropdown menu.
+  * Here you can either:
+      * Choose the option "Download as ZIP" which will download all files and save a copy locally.
+      * Choose the option "Open with Github Desktop" and work from there.
 
 ---
 
