@@ -57,22 +57,41 @@ When the user reaches the abandoned house they will have an opportunity to inves
 
 
 #### Start screen
+![Ascii Banner](assets/images/ascii_banner.png)
+
 The starting screen features an ascii art banner, and will ask the user to provide a name. The name will only be accepted if it only contains letters.
+
+![Name Input](assets/images/name_input.png)
+
 A short introduction message will then be displayed for the user, and let them know how to play the game.
 The user will then be able to press enter to start the game.
+![Player Menu](assets/images/player_menu.png)
+![How To Play](assets/images/how_to_play.png)
 
 The purpose of this is to introduce the user to the story and how to play the game.
 
 #### Displaying text contents
-Since this game is pretty heavy on the story part, I've done my best to make everything as clean and readable as possible using colorama library, whitespacing and new lines. The longer parts of the story are all colored text, and has been placed in a separate file to keep the main game file cleaner.
+Since this game is pretty heavy on the story part, I've done my best to make everything as clean and readable as possible using colorama library, whitespacing and new lines, checking the width. The longer parts of the story are all colored text, and has been placed in a separate file to keep the main game file cleaner.
+
+![Text Sample](assets/images/sample_of_text.png)
+
 The purpose of this is to not overwhelm the user and provide them with a structured and clean output, so that it's easy to keep up.
 
 
 #### Player options
 The options provided will be displayed for the user along with a prompt that will mostly ask for a direction or a choice between a-d.
 
+![Player Options](assets/images/player_options.png)
+
 #### Winning and losing
-If the user wins or lose the game, a function will be called to display a message. In both scenarios a prompt will also appear to ask the user if they want to play again, typing "yes" will restart the game, and any other key press will exit the game.
+If the user wins or lose the game, a function will be called to display a message followed by some ascii art.
+
+![Game Over](assets/images/death_ascii.png)
+![Win Game]()
+
+In both scenarios a prompt will also appear to ask the user if they want to play again, typing "yes" will restart the game, and any other key press will exit the game.
+
+![Play Again](assets/images/play_again.png)
 
 
 

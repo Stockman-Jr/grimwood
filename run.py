@@ -154,12 +154,12 @@ def flashlight_scene():
     global modern_flashlight
     typing(story.FOUND_ITEM)
     time.sleep(1)
-    typing("Would you like to keep it?(yes/no) >> \n")
+    typing("Would you like to keep it?(yes/no) >> ")
     userInput = input()
 
     if userInput == "yes":
         modern_flashlight = True
-        print("You kept the flashlight.")
+        print("\nYou kept the flashlight.")
         typing(story.ENCOUNTER)
     elif userInput == "no":
         modern_flashlight = False

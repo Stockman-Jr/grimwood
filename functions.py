@@ -78,13 +78,15 @@ def win_game(message, func):
     and display a message
     """
     typing(message)
-    time.sleep(1)
-    print(Fore.GREEN + """
-  
-                •·✦º✦·» ヽ(´▽`)/ «·✦º✦·•
-  
+    # time.sleep(1)
+    typing(Fore.GREEN + """
+
+
+                     •·✦º✦·» ヽ(´▽`)/ «·✦º✦·•
+
+          You survived Grimwood and made it to safety, you won!
+
     """ + Fore.RESET)
-    typing("You survived Grimwood and made it to safety, you won!\n\n")
     time.sleep(1)
     play_again(func)
 

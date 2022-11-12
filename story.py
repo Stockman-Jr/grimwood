@@ -31,7 +31,8 @@ FOUND_ITEM = (Fore.CYAN + """
     pile on the left side of the trail where the light is emanating from.
 
     You dig through the leafpile and find a flashlight! A strong one
-    too, how strangely convenient! With this you can navigate the woods safely!
+    too, how strangely convenient!
+    With this you can navigate the woods safely!
 
     """ + Fore.RESET)
 
@@ -47,16 +48,17 @@ ENCOUNTER = (Fore.RED + """
     """ + Fore.RESET)
 
 DEN_DEATH = (Fore.RED + """
-    You enter the pitch-black path, but since you have your flashlight you
-    can see just fine.
-    Eventually you see the narrow path ends and reveals a big, open space
-    surrounded by trees.
-    And on the other side you see... a tunnel! This must be the way out!
+    You enter the pitch-black path, but since you have your
+    flashlight you can see just fine.
+    Eventually you see the narrow path ends and
+    reveals a big, open space surrounded by trees.
+    And on the other side you see... a tunnel!
+    This must be the way out!
 
-    As you take a few steps into this strange, open space  you hear something
-    crunch beneath your feet.
-    You shine the light on your feet, and your heart drops to your stomach...
-    Bones, everywhere.
+    As you take a few steps into this strange, open space
+    you hear something crunch beneath your feet.
+    You shine the light on your feet, and your heart
+    drops to your stomach... Bones, everywhere.
 
     As you stand there, horrified by your discovery,
     the sound you just made seems to have drawn unwanted attention.
@@ -69,13 +71,14 @@ DEN_DEATH = (Fore.RED + """
 DEN_SURVIVAL = (Fore.RED + """
     You enter the pitch-black path, and your old flashligt isn't
     helping you see much, but the path is easily navigated.
-    Soon you see the narrow path ending and you walk into a big, open space.
+    Soon you see the narrow path ending and you
+    walk into a big, open space.
 
-    As you take a few steps into the open space , you hear something crunch
-    beneath your feet.
-    You shine the light on your feet, and your heart drops to your stomach...
+    As you take a few steps into the open space,
+    you hear something crunch beneath your feet.
+    You shine the light on your feet, and your heart drops
+    to your stomach... Bones, everywhere. This must be where it lives.
 
-    Bones, everywhere. This must be where it lives.
     Although horrified by what you've just discovered, you keep going,
     and find yourself standing in front of an entrance to a tunnel.
 
@@ -84,8 +87,8 @@ DEN_SURVIVAL = (Fore.RED + """
     That sinister, sanguine expression has changed into
     something more distressed, and hesitant.
 
-    You walk towards it with your arm out holding the old flashlight to confirm
-    your theory, and it keeps it's distance!
+    You walk towards it with your arm out holding the old flashlight
+    to confirm your theory, and it keeps it's distance!
     Confident in that you now know your'e carrying
     something special, you charge forward!
 
@@ -94,7 +97,7 @@ DEN_SURVIVAL = (Fore.RED + """
     in a state of decay, withering away.
 
     Eventually the screams stops as the creature disappears into thin air.
-    .... Woah, did you kill it? 
+    .... Woah, did you kill it?
 
     """ + Fore.RESET)
 
@@ -138,8 +141,8 @@ HOUSE_ENCOUNTER = (Fore.RED + """
     Something is outside.
 
     You take a deep breath and look toward the broken window.
-    You see the shape of a distorted lower body, violently muscular and
-    covered in rippling shadows.
+    You see the shape of a distorted lower body, violently muscular
+    and covered in rippling shadows.
 
     You are frozen in horror, trying to decide what to do, when a huge
     clawed hand splinters the window frame.
@@ -166,8 +169,8 @@ SOUTH_SURVIVAL = (Fore.RED + """
     You kept going south.
     The old flashlight isn't that helpful in this darkness,
     but if you walk slowly and watch your step, you'll be fine.
-    As you navigated through the woods, you would notice the creature lurking
-    behind trees, watching your every step.
+    As you navigated through the woods, you would notice the creature
+    lurking behind trees, watching your every step.
 
     The creature was desperate to have you, but something made it hesitate.
     And for some reason, although the old flashlight would not let you see
