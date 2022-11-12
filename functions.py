@@ -107,4 +107,4 @@ def play_again(restart):
         restart()
     else:
         print("Wise choice... Thanks for playing.")
-        exit()
+        sys.exit()

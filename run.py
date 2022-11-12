@@ -1,6 +1,7 @@
 import time
 import story
-from functions import typing, input_checker, win_game, game_over, player_menu, BANNER
+from functions import typing, input_checker, player_menu
+from functions import win_game, game_over, BANNER
 from colorama import Style
 
 modern_flashlight = False
@@ -15,6 +16,7 @@ def start_game():
     Prompts user for a name, gives a short introduction
     Then provides the option to start the game
     """
+    reset_globals()
     print(BANNER)
 
     typing("Well, hello stranger.\n")
@@ -25,7 +27,7 @@ def start_game():
             break
         else:
             typing("Please.. give me a name.\n")
-    
+ 
     typing(f"I see... {player_name}. Welcome.\n")
     time.sleep(1)
     typing(story.INTRO_MSG)
@@ -308,6 +310,7 @@ def final_decisions():
     typing("No point in trying to grasp it, you gotta move on. Will you..\n")
     time.sleep(1)
     choices = input_checker("""
+
      A. Off piste was a bad idea.
      Go back to the three-way-fork and go west,
      the only path you haven't tried.
@@ -325,6 +328,15 @@ def final_decisions():
         'I should probaly keep this....'
         you muttered to yourself as you made your way to safety.
         """, start_game)
+
+
+def reset_globals():
+    global modern_flashlight, old_flashlight, visited
+    modern_flashlight = False
+    old_flashlight = False
+    visited = False
+
+    return modern_flashlight, old_flashlight, visited
 
 
 start_game()
