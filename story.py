@@ -9,7 +9,7 @@ INTRO_MSG = (Fore.CYAN + """
 
     Make the right choices, and you just might succeed.
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 DEAD_GROVE = (Fore.RED + """
     You walk towards the grove and stop at the entrace to look around,
@@ -24,7 +24,7 @@ DEAD_GROVE = (Fore.RED + """
     You look up and see a pair of glowing eyes with a huge grin
     looking down at you...
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 FOUND_ITEM = (Fore.CYAN + """
     You arrive at the source of the light and you notice a small leaf
@@ -33,7 +33,7 @@ FOUND_ITEM = (Fore.CYAN + """
     You dig through the leafpile and find a flashlight! A strong one
     too, how strangely convenient! With this you can navigate the woods safely!
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 ENCOUNTER = (Fore.RED + """
     As you're crouched on the trail, proudly inspecting your newfound
@@ -44,7 +44,7 @@ ENCOUNTER = (Fore.RED + """
     Some strange distorted noises emits from the direction you were
     walking towards.
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 DEN_DEATH = (Fore.RED + """
     You enter the pitch-black path, but since you have your flashlight you
@@ -64,7 +64,7 @@ DEN_DEATH = (Fore.RED + """
     You look up towards the tunnel and see the big eyes with the
     terrifying grin looking at you...
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 DEN_SURVIVAL = (Fore.RED + """
     You enter the pitch-black path, and your old flashligt isn't
@@ -94,11 +94,9 @@ DEN_SURVIVAL = (Fore.RED + """
     in a state of decay, withering away.
 
     Eventually the screams stops as the creature disappears into thin air.
-    Dead or not, you've fought it off.
+    .... Woah, did you kill it? 
 
-    As you reach the end of the tunnel you can see city lights in the distance.
-
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 HOUSE = (Fore.CYAN + """
     You start walking, continuing south off the path.
@@ -117,7 +115,7 @@ HOUSE = (Fore.CYAN + """
 
     You look around...
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 HOUSE_ITEM = (Fore.CYAN + """
     You direct your flashlight towards the floor underneath the desk,
@@ -133,7 +131,7 @@ HOUSE_ITEM = (Fore.CYAN + """
     The light it emits is weak though, and it feels very strange.. Warm
     and comforting somehow.
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 HOUSE_ENCOUNTER = (Fore.RED + """
     You suddenly hear twigs cracking outside the broken window.
@@ -147,7 +145,7 @@ HOUSE_ENCOUNTER = (Fore.RED + """
     clawed hand splinters the window frame.
     Looks like it's about to crouch and take a look inside.
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 HOUSE_ENCOUNTER_OUTCOME = (Fore.RED + """
     The creature crouches slowly, and after what feels like forever,
@@ -162,7 +160,7 @@ HOUSE_ENCOUNTER_OUTCOME = (Fore.RED + """
 
     After a minute of silence you open your eyes, and the creature is gone.
 
-""" + Fore.RESET)
+    """ + Fore.RESET)
 
 SOUTH_SURVIVAL = (Fore.RED + """
     You kept going south.
@@ -188,4 +186,4 @@ SOUTH_SURVIVAL = (Fore.RED + """
     The hesitant look was gone... now it looked enraged, filled with hatred.
     You looked at the old flashlight.
 
-""" + Fore.RESET)
+    """ + Fore.RESET)

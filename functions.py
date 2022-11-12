@@ -3,23 +3,23 @@ import sys
 from colorama import Fore
 import getch
 
-BANNER = print(Fore.RED + """
-       ▄█▀─▄▄▄▄▄▄▄─▀█▄
-       ▀█████████████▀
-       ────█▄███▄█
-       ─────█▀█▀█
-            
-█▀▀ █▀█ █ █▀▄▀█ █░█░█ █▀█ █▀█ █▀▄
-█▄█ █▀▄ █ █░▀░█ ▀▄▀▄▀ █▄█ █▄█ █▄▀ 
+BANNER = (Fore.RED + """
+                    ▄█▀─▄▄▄▄▄▄▄─▀█▄
+                    ▀█████████████▀
+                    ────█▄███▄█
+                    ─────█▀█▀█
+                      
+            █▀▀ █▀█ █ █▀▄▀█ █░█░█ █▀█ █▀█ █▀▄
+            █▄█ █▀▄ █ █░▀░█ ▀▄▀▄▀ █▄█ █▄█ █▄▀ 
 
 """ + Fore.RESET)
 
 YOU_DIED = ("""
 
-                   YOU DIED   
-                        
+                   YOU DIED
+                      
                                 ▄▄▄░
-           ▄▄▄▄░              ░█████░   
+           ▄▄▄▄░              ░█████░ 
           ░████▌               ▐███▀   ▐▌
       ░    ░▀▀▀░                       █
        ▓                             ▐▌
@@ -30,7 +30,7 @@ YOU_DIED = ("""
               ▀▀▌▀█░▓▓▐▓░▓▒░▀░▌█▌
                  ░▀▐▐▓░█▒▓▒▐▓▐░
                      ▀ █▒█▌░▀
-    
+  
       """)
 
 
@@ -79,8 +79,12 @@ def win_game(message, func):
     """
     typing(message)
     time.sleep(1)
-    print("•·✦º✦·» ヽ(´▽`)/ «·✦º✦·•\n")
-    typing("You survived Grimwood and made it to safety, you won!")
+    print(Fore.GREEN + """
+  
+                •·✦º✦·» ヽ(´▽`)/ «·✦º✦·•
+  
+    """ + Fore.RESET)
+    typing("You survived Grimwood and made it to safety, you won!\n\n")
     time.sleep(1)
     play_again(func)
 
@@ -98,7 +102,7 @@ def game_over(message, func):
 
 def play_again(restart):
     print("Would you like to play again?\n")
-    choice = input("Type 'yes' or click button at the top to restart game. >> ")
+    choice = input("Type 'yes' or click button at the top to restart game\n")
     if choice == "yes":
         restart()
     else:

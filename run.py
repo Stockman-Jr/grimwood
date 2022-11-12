@@ -1,6 +1,6 @@
 import time
 import story
-from functions import typing, input_checker, win_game, game_over, player_menu
+from functions import typing, input_checker, win_game, game_over, player_menu, BANNER
 from colorama import Style
 
 modern_flashlight = False
@@ -15,6 +15,7 @@ def start_game():
     Prompts user for a name, gives a short introduction
     Then provides the option to start the game
     """
+    print(BANNER)
 
     typing("Well, hello stranger.\n")
 
@@ -23,7 +24,7 @@ def start_game():
         if player_name.isalpha():
             break
         else:
-            typing("Please.. give me a name.")
+            typing("Please.. give me a name.\n")
     
     typing(f"I see... {player_name}. Welcome.\n")
     time.sleep(1)
@@ -153,7 +154,7 @@ def flashlight_scene():
         modern_flashlight = False
         win_game("""
         For some reason, unbeknownst to anyone,
-        you decided to not keep the flashlight and kicked 
+        you decided to not keep the flashlight and kicked
         it far off into the woods.
 
         You kept walking east as you were pondering over this and that.
@@ -193,10 +194,12 @@ def creatures_den():
         game_over("then it charges..", start_game)
     elif old_flashlight is True:
         typing(story.DEN_SURVIVAL)
+        time.sleep(1)
         win_game("""
         As you reach the end of the tunnel
         you see city lights flickering in the distance..""", start_game)
     else:
+        time.sleep(1)
         game_over("""
         You walk into pitch-black darkness, you can't see a thing.
         But the path is flat and straight, so you keep walking.
@@ -216,7 +219,7 @@ def abandoned_house_encounter():
     time.sleep(1)
     choices = input_checker("""
     What will you do?(a/b/c)
-               
+         
     A. Slap yourself to release you from the paralyzing fear, and RUN!!!
 
     B. You're frozen in fear, you stay still and watch as you squeeze the old
@@ -305,14 +308,16 @@ def final_decisions():
     typing("No point in trying to grasp it, you gotta move on. Will you..\n")
     time.sleep(1)
     choices = input_checker("""
-     A. Go back to the path, off piste was a bad idea.
+     A. Off piste was a bad idea.
+     Go back to the three-way-fork and go west,
+     the only path you haven't tried.
 
      B. Continue south.
 
-     Where will you go? (a/b) >> 
+     Where will you go? (a/b) >>
     """, OPTIONS[0:2])
     if choices == "a":
-        three_fork_path()
+        creatures_den()
     elif choices == "b":
         typing(story.SOUTH_SURVIVAL)
         time.sleep(1)
