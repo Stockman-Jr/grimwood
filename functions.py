@@ -12,7 +12,7 @@ BANNER = (Fore.RED + """
             █▀▀ █▀█ █ █▀▄▀█ █░█░█ █▀█ █▀█ █▀▄
             █▄█ █▀▄ █ █░▀░█ ▀▄▀▄▀ █▄█ █▄█ █▄▀ 
 
-""" + Fore.RESET)
+         """ + Fore.RESET)
 
 YOU_DIED = ("""
 
@@ -41,7 +41,7 @@ def typing(text):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.02)
+        time.sleep(0.04)
 
 
 def player_menu(func):

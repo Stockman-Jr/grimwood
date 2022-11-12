@@ -40,9 +40,15 @@ The goal of the game is to make the right choices and make it out of the woods a
   * For the game to be clear to users at all times
 
 - - -
-## Design
+## Game Design
 
 ### Story and flow chart mapping
+![Flow Chart](/assets/images/grimwood_flow_chart.png)
+This is and updated flow chart of the game, since there has been some adjustments of the initial plan. 
+## Interactions in the game
+Most of the interactions in the game are options for the user to choose from, which direction they want to go or what they'll do in an encounter with the creature.
+There are two items the user can pick up in this game, a modern flashlight and an old flashlight. The user won't be able to access certain places without one or the other.
+When the user reaches the abandoned house they will have an opportunity to investigate, and they will be able to investigate two places in order to find the second item, otherwise it's game over.
 
 - - -
 ## Features
@@ -168,3 +174,5 @@ This project was deployed using heroku, steps to deployment are as follows:
 ## Credits
 
 ### Code
+  * [Stackoverflow](https://stackoverflow.com/) - For the function that typed out the text.
+  * [Escape the Cave](https://github.com/roomacarthur/escape-the-cave) - Some inspiration was taken from a fellow students text-based game, roomacarthur@Github.
