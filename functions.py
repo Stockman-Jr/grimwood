@@ -8,18 +8,18 @@ BANNER = (Fore.RED + """
                             ▀█████████████▀
                             ────█▄███▄█
                             ─────█▀█▀█
-                        
+
                     █▀▀ █▀█ █ █▀▄▀█ █░█░█ █▀█ █▀█ █▀▄
-                    █▄█ █▀▄ █ █░▀░█ ▀▄▀▄▀ █▄█ █▄█ █▄▀ 
+                    █▄█ █▀▄ █ █░▀░█ ▀▄▀▄▀ █▄█ █▄█ █▄▀
 
          """ + Fore.RESET)
 
 YOU_DIED = ("""
 
                    YOU DIED
-                      
+
                                 ▄▄▄░
-           ▄▄▄▄░              ░█████░ 
+           ▄▄▄▄░              ░█████░
           ░████▌               ▐███▀   ▐▌
       ░    ░▀▀▀░                       █
        ▓                             ▐▌
@@ -30,7 +30,7 @@ YOU_DIED = ("""
               ▀▀▌▀█░▓▓▐▓░▓▒░▀░▌█▌
                  ░▀▐▐▓░█▒▓▒▐▓▐░
                      ▀ █▒█▌░▀
-  
+
       """)
 
 
@@ -41,7 +41,7 @@ def typing(text):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.02)
+        time.sleep(0.03)
 
 
 def player_menu(func):
@@ -78,7 +78,7 @@ def win_game(message, func):
     and display a message
     """
     typing(message)
-    # time.sleep(1)
+    time.sleep(1)
     typing(Fore.GREEN + """
 
 
@@ -109,7 +109,9 @@ def play_again(restart):
     Any other input will exit game
     """
     print("Would you like to play again?\n")
-    choice = input("Type 'yes' or click button at the top to restart game\n")
+    choice = input(
+        "Type 'yes' or click button at the top to restart game\n "
+        "Any other key press will exit the game\n")
     if choice == "yes":
         restart()
     else:

@@ -9,7 +9,7 @@ The goal of the game is to make the right choices and make it out of the woods a
 ## Table of Contents
 
 * [User Stories](#user-stories)
-* [Design](#design)
+* [Design](#game--page-design)
 * [Features](#features)
     * [Existing Features](#existing-features)
     * [Future Features](#future-features)
@@ -40,21 +40,23 @@ The goal of the game is to make the right choices and make it out of the woods a
   * For the game to be clear to users at all times
 
 - - -
-## Game Design
+## Game & Page Design
 
-### Story and flow chart mapping
+### Flow chart mapping
 ![Flow Chart](/assets/images/grimwood_flow_chart.png)
-This is and updated flow chart of the game, since there has been some adjustments of the initial plan. 
+This is the flow chart created with LucidChart, to act as a road map and show the the flow of the game.
 ## Interactions in the game
 Most of the interactions in the game are options for the user to choose from, which direction they want to go or what they'll do in an encounter with the creature.
+Options the user makes will provide different scenarios and outcomes.
 There are two items the user can pick up in this game, a modern flashlight and an old flashlight. The user won't be able to access certain places without one or the other.
-When the user reaches the abandoned house they will have an opportunity to investigate, and they will be able to investigate two places in order to find the second item, otherwise it's game over.
+When the user reaches the abandoned house they will have an opportunity to investigate, and they will be able to investigate two places in order to find the second item that's needed to progress further.
+## CSS
+The only CSS that was added for this project was to center the terminal and button, as well as adding a dark grey background color.
 
 - - -
 ## Features
 
 ### Existing Features
-
 
 #### Start screen
 ![Ascii Banner](assets/images/ascii_banner.png)
@@ -72,7 +74,7 @@ The user will then be able to press enter to start the game.
 The purpose of this is to introduce the user to the story and how to play the game.
 
 #### Displaying text contents
-Since this game is pretty heavy on the story part, I've done my best to make everything as clean and readable as possible using colorama library, whitespacing and new lines, checking the width. The longer parts of the story are all colored text, and has been placed in a separate file to keep the main game file cleaner.
+Since this game is pretty heavy on the story part, I've done my best to make everything as clean and readable as possible using colorama library, whitespacing and new lines, checking the width. The longer parts of the story are all colored text, and have been placed in a separate file to keep the main game file cleaner.
 
 ![Text Sample](assets/images/sample_of_text.png)
 
@@ -99,20 +101,39 @@ In both scenarios a prompt will also appear to ask the user if they want to play
 
 ### Future Features
   * I would like to implement more types of user interactions to the game, maybe provide some puzzles for the user to solve.
-  * More "rooms" and outcomes.
+  * More "rooms" and outcomes, to add more complexity to the game.
 
 
 
 ---
 
 ## Testing
-Print statements were used heavily throughout the project to identify errors or check if code were working correctly.
+Print statements were used throughout the project to identify errors or check if code were working correctly.
 Alot of the testing were also done in visual studio code, where I experimented with code and tested ideas.
 
+### Manual Testing
+The game was played through and tested extensively to make sure everything was working as intented. Results:
+  * Player menu shows instructions on 'i' key press and starts game on 'enter' key press✔️
+  * Invalid input will show message to ask for correct input and prompt for it repeadeatly until a valid input is provided✔️
+  * Options are correctly sliced from list throughout the game✔️
+  * Global variables are working and affecting the game and story as intended✔️
+  * Game over messages and win messages along with ascii art are displaying correctly✔️
+  * Valid input of options are progressing through the game as intended✔️
+  * For else loop where user can investigate two times is working correctly✔️
+  * Story and other text content are working and displayed correctly✔️
+  * Play again function works as intended and global variables are resetting in start_game function✔️
 
+  ### User Testing Feedback
+  * User thought that the game was displayed nicely on screen and that it was easy to follow.
+  * User enjoyed the fact that there was different ways of winning, but even more ways of losing.
+  * User enjoyed playing through multiple times, seeing the different different parts of the game.
 
 
 ### Validator Testing
+### PEP8
+There are no problems displayed with PEP8 in Gitpod, except the the three warnings which I was told was going to be there by default.
+
+![PEP8](assets/images/pep8_problems.png)
 
 
 
@@ -152,7 +173,7 @@ No known unsolved bugs.
   * [GitHub](https://github.com/) - To save and store files for the website.
   * Git - For version control.
   * Visual Studio Code(desktop) - for testing and experimenting with code
-  * LucidChart - for creating a flow chart to map out the game
+  * [LucidChart](https://lucid.app/) - for creating a flow chart to map out the game
   * Heroku
 ---
 

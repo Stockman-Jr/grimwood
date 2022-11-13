@@ -13,8 +13,10 @@ print(Style.BRIGHT)
 
 def start_game():
     """
-    Prompts user for a name, gives a short introduction
-    Then provides the option to start the game
+    Prompts user for a name, which will only accept letters
+    Gives a short introduction to the game and story
+    Provides a small menu where user can press 'i' key to view
+    gameplay instructions or enter key to start.
     """
     reset_globals()
     print(BANNER)
@@ -42,6 +44,7 @@ def intro_scene():
     """
     First scene of the game, where user will be able
     to choose which direction to take
+    If visited is true, content displayed will be slightly different
     """
     global visited
     if visited is False:
@@ -74,6 +77,7 @@ def fruit_grove():
     """
     If user chose east from intro scene, this function will play out.
     Some story will be told and then user will be provided with two options.
+    Will return global visited as true if user chooses to go back.
     """
     global visited
 
@@ -105,8 +109,8 @@ def fruit_grove():
 def three_fork_path():
     """
     If user chose south from intro_scene, this function will play out.
-    Some story will be told and then user will be prompted to choose
-    from three directions.
+    User will be prompted to choose from three directions.
+    Two of the directions requires old or modern flashlight.
     """
 
     typing("""
@@ -196,8 +200,8 @@ def flashlight_scene():
 def creatures_den():
     """
     If user chose west from three_fork_path, this function will play out.
-    This is where the creature lives, and user will only survive if
-    old_flashlight is True.
+    This is where the creature lives, and different endings will play out
+    depending on what items user have or doesn't have.
     """
 
     if modern_flashlight is True:
@@ -257,6 +261,7 @@ def abandoned_house_encounter():
 def abandoned_house():
     """
     If user chose south from three_fork_path, this function will play out.
+    Story will progress and user will be prompted to investigate
     User can only reach this point if modern_flashlight is True
     """
     global old_flashlight
@@ -273,6 +278,7 @@ def abandoned_house():
         You should probably investigate..\n\n""")
     time.sleep(1)
 
+    # Users can investigate max two options here
     for choices in range(2):
         choices = input_checker("""
         What would you like to investigate?(a/b/c/d)
@@ -315,6 +321,11 @@ def abandoned_house():
 
 
 def final_decisions():
+    """
+    If user has made it this far, they will be able to win the game
+    This function will basically provide two options which will
+    have different endings
+    """
     typing("'What the heck just happened?'\n")
     typing("No point in trying to grasp it, you gotta move on. Will you..\n")
     time.sleep(1)
@@ -334,12 +345,16 @@ def final_decisions():
         typing(story.SOUTH_SURVIVAL)
         time.sleep(1)
         win_game("""
-        'I should probaly keep this....'
+        'I should probably keep this....'
         you muttered to yourself as you made your way to safety.
         """, start_game)
 
 
 def reset_globals():
+    """
+    Function to reset global variables when user wants
+    to play again
+    """
     global modern_flashlight, old_flashlight, visited
     modern_flashlight = False
     old_flashlight = False

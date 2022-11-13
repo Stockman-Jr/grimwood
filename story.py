@@ -1,3 +1,7 @@
+"""
+This file holds the text of the longer story parts
+"""
+
 from colorama import Fore
 
 INTRO_MSG = (Fore.CYAN + """
@@ -7,7 +11,7 @@ INTRO_MSG = (Fore.CYAN + """
     All you do know, as reality starts to sink in, is that you have to
     get out of there... alive.
 
-    Make the right choices, and you just might succeed.
+    Make the right choices, and you just might survive.
 
     """ + Fore.RESET)
 
@@ -16,9 +20,9 @@ DEAD_GROVE = (Fore.RED + """
     the fruits looks delicious.
 
     As you start walking to pick up some fruit for your journey,
-    you suddenly feel the ground beneath you give in..
+    you suddenly feel the ground beneath you give way..
 
-    "AAAaaahh"....
+    "AAAaaahh!"....
 
     You wake up to find yourself  at the bottom of a pitfall.
     You look up and see a pair of glowing eyes with a huge grin
@@ -30,7 +34,7 @@ FOUND_ITEM = (Fore.CYAN + """
     You arrive at the source of the light and you notice a small leaf
     pile on the left side of the trail where the light is emanating from.
 
-    You dig through the leafpile and find a flashlight! A strong one
+    You dig through the pile and find a flashlight! A strong one
     too, how strangely convenient!
     With this you can navigate the woods safely!
 
@@ -38,7 +42,7 @@ FOUND_ITEM = (Fore.CYAN + """
 
 ENCOUNTER = (Fore.RED + """
     As you're crouched on the trail, proudly inspecting your newfound
-    treasure, the hairs on your neck suddenly starts to rise..
+    treasure, the hairs on the back of your neck suddenly starts to rise..
 
     You're being watched.
 
@@ -48,16 +52,16 @@ ENCOUNTER = (Fore.RED + """
     """ + Fore.RESET)
 
 DEN_DEATH = (Fore.RED + """
-    You enter the pitch-black path, but since you have your
+    You enter the pitch-black path, but with your
     flashlight you can see just fine.
-    Eventually you see the narrow path ends and
-    reveals a big, open space surrounded by trees.
+    Eventually you see where the narrow path ends and
+    a big, open space surrounded by trees is revealed.
     And on the other side you see... a tunnel!
     This must be the way out!
 
     As you take a few steps into this strange, open space
     you hear something crunch beneath your feet.
-    You shine the light on your feet, and your heart
+    You shine the light at your feet, and your heart
     drops to your stomach... Bones, everywhere.
 
     As you stand there, horrified by your discovery,
@@ -69,18 +73,18 @@ DEN_DEATH = (Fore.RED + """
     """ + Fore.RESET)
 
 DEN_SURVIVAL = (Fore.RED + """
-    You enter the pitch-black path, and your old flashligt isn't
+    You enter the pitch-black path, and your old flashlight isn't
     helping you see much, but the path is easily navigated.
     Soon you see the narrow path ending and you
     walk into a big, open space.
 
     As you take a few steps into the open space,
     you hear something crunch beneath your feet.
-    You shine the light on your feet, and your heart drops
+    You shine the light at your feet, and your heart drops
     to your stomach... Bones, everywhere. This must be where it lives.
 
     Although horrified by what you've just discovered, you keep going,
-    and find yourself standing in front of an entrance to a tunnel.
+    and find yourself standing in front of the entrance to a tunnel.
 
     You see the glowing eyes along with the terrifying grin appear in
     the entrance before you. But something is different.
@@ -89,7 +93,7 @@ DEN_SURVIVAL = (Fore.RED + """
 
     You walk towards it with your arm out holding the old flashlight
     to confirm your theory, and it keeps it's distance!
-    Confident in that you now know your'e carrying
+    Confident that your flashlight truly is
     something special, you charge forward!
 
     Distorted screams echoes in the tunnel as the creature is desperatly
@@ -107,8 +111,8 @@ HOUSE = (Fore.CYAN + """
     After a while you arrive at a small, abandoned house.
     You might find something useful in there, you go inside...
 
-    Dusty with lots of spiderwebs, how cozy. Looks like no one has set
-    foot in there for some time.
+    Dusty and filled with spiderwebs, how cozy.
+    Looks like no one has set foot in here for some time.
 
     Handwritten notes and books are scattered everywhere, someone's
     been busy.
@@ -122,7 +126,7 @@ HOUSE = (Fore.CYAN + """
 
 HOUSE_ITEM = (Fore.CYAN + """
     You direct your flashlight towards the floor underneath the desk,
-    and you notice something silver sticking out from a pile of notes.
+    and you notice flashing silver sticking out from a pile of notes.
     You put your flashlight down and crouch down to pick it up.
 
     It looks like a very old flashlight in the shape of a square with a
@@ -138,7 +142,7 @@ HOUSE_ITEM = (Fore.CYAN + """
 
 HOUSE_ENCOUNTER = (Fore.RED + """
     You suddenly hear twigs cracking outside the broken window.
-    Something is outside.
+    Something is approaching.
 
     You take a deep breath and look toward the broken window.
     You see the shape of a distorted lower body, violently muscular
@@ -146,7 +150,7 @@ HOUSE_ENCOUNTER = (Fore.RED + """
 
     You are frozen in horror, trying to decide what to do, when a huge
     clawed hand splinters the window frame.
-    Looks like it's about to crouch and take a look inside.
+    Looks like it's about to crouch down to take a look inside.
 
     """ + Fore.RESET)
 
@@ -166,7 +170,7 @@ HOUSE_ENCOUNTER_OUTCOME = (Fore.RED + """
     """ + Fore.RESET)
 
 SOUTH_SURVIVAL = (Fore.RED + """
-    You kept going south.
+    You keep going south.
     The old flashlight isn't that helpful in this darkness,
     but if you walk slowly and watch your step, you'll be fine.
     As you navigated through the woods, you would notice the creature
