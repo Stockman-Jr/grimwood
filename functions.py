@@ -86,6 +86,7 @@ def win_game(message, func):
 
           You survived Grimwood and made it to safety, you won!
 
+
     """ + Fore.RESET)
     time.sleep(1)
     play_again(func)
@@ -110,7 +111,7 @@ def play_again(restart):
     """
     print("Would you like to play again?\n")
     choice = input(
-        "Type 'yes' or click button at the top to restart game\n "
+        "Type 'yes' or click button at the top to restart game\n"
         "Any other key press will exit the game\n")
     if choice == "yes":
         restart()

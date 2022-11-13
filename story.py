@@ -24,7 +24,7 @@ DEAD_GROVE = (Fore.RED + """
 
     "AAAaaahh!"....
 
-    You wake up to find yourself  at the bottom of a pitfall.
+    You wake up to find yourself at the bottom of a pitfall.
     You look up and see a pair of glowing eyes with a huge grin
     looking down at you...
 

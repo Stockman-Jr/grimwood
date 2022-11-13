@@ -15,6 +15,7 @@ The goal of the game is to make the right choices and make it out of the woods a
     * [Future Features](#future-features)
 * [Testing](#testing)
     * [Validator Testing](#validator-testing)
+    * [Manual Testing](#manual-testing)
     * [Bugs](#bugs)
     * [Unsolved Bugs](#unsolved-bugs)
 * [Technologies Used](#technologies-used)
@@ -85,6 +86,9 @@ The purpose of this is to not overwhelm the user and provide them with a structu
 The options provided will be displayed for the user along with a prompt that will mostly ask for a direction or a choice between a-d.
 
 ![Player Options](assets/images/player_options.png)
+
+An invalid input will display a message which ask for a valid input and the options that are valid.
+![Invalid Input](assets/images/input_validation.png)
 
 #### Winning and losing
 If the user wins or lose the game, a function will be called to display a message followed by some ascii art.
@@ -216,5 +220,6 @@ This project was deployed using heroku, steps to deployment are as follows:
 ## Credits
 
 ### Code
-  * [Stackoverflow](https://stackoverflow.com/) - For the function that typed out the text.
-  * [Escape the Cave](https://github.com/roomacarthur/escape-the-cave) - Some inspiration was taken from a fellow students text-based game, roomacarthur@Github.
+  * [Stackoverflow](https://stackoverflow.com/) - Helped me out alot when looking for solutions to my code, and also found out how to create the typing function through this site.
+  * [Escape the Cave](https://github.com/roomacarthur/escape-the-cave) - The idea of having certain functions in a separate file was taken from a fellow students text-based game, roomacarthur@Github!
+  * [Codeigo](https://codeigo.com/python/check-if-user-pressed-enter) - I initially wanted to use the keyboard library for the little player menu to listen for key presses, but that library required root. This article provided me with a different solution using getch.
